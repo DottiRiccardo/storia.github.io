@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>SECONDA GUERRA MONDIALE</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1f87ddca-4771-809f-ae14-fa8e73e3f09a" class="page sans"><header><img class="page-cover-image" src="https://i.imgflip.com/90ft8o.jpg" style="object-position:center 26.180000000000003%"/><h1 class="page-title">SECONDA GUERRA MONDIALE</h1><p class="page-description"></p></header><div class="page-body"><h1 id="2067ddca-4771-8071-84b9-e56b8c3271ab" class="">WW2</h1><h2 id="2067ddca-4771-8069-ac34-f250e3d5fe12" class="">Premessa</h2><h3 id="2067ddca-4771-80ba-98ed-d2457891747f" class="">Schieramenti e finalità</h3><p id="2067ddca-4771-805f-8286-fe080991704f" class="">Similarmente alla Prima Guerra Mondiale si vedono le mire espansionistiche della Germania da una parte e l’opposizione anglo-francese dall’altra<br/><br/></p><table id="2067ddca-4771-80db-8990-f91a8f2737fe" class="simple-table"><tbody><tr id="2067ddca-4771-8028-9961-fcdf8eddbf82"><td id="}];&gt;" class="" style="width:386px">Alleati</td><td id="Qgkn" class="" style="width:424px">Asse</td></tr><tr id="2067ddca-4771-8026-803e-ca38e30432fa"><td id="}];&gt;" class="" style="width:386px">Regno Unito</td><td id="Qgkn" class="" style="width:424px">Germania</td></tr><tr id="2067ddca-4771-8052-821d-d73d3c5e5cd5"><td id="}];&gt;" class="" style="width:386px">Francia</td><td id="Qgkn" class="" style="width:424px">Italia(dal 1940 al 1943)</td></tr><tr id="2067ddca-4771-80c5-936d-cfddbd0911bd"><td id="}];&gt;" class="" style="width:386px">URSS (giugno 1941)</td><td id="Qgkn" class="" style="width:424px">Giappone (settembre 1940)</td></tr><tr id="2067ddca-4771-80e9-9292-f2454791d974"><td id="}];&gt;" class="" style="width:386px">Cina (dicembre 1941)</td><td id="Qgkn" class="" style="width:424px">Ungheria</td></tr><tr id="2067ddca-4771-8034-b04f-c5fb4c079c73"><td id="}];&gt;" class="" style="width:386px">USA (dicembre 1941)</td><td id="Qgkn" class="" style="width:424px">Romania</td></tr><tr id="2067ddca-4771-8033-bc76-f0a53a364b82"><td id="}];&gt;" class="" style="width:386px">Paesi del Commonwealth (non ho voglia di elencarli tutti)</td><td id="Qgkn" class="" style="width:424px">Bulgaria</td></tr><tr id="2067ddca-4771-809f-b72c-c2900f5d6e44"><td id="}];&gt;" class="" style="width:386px">Italia(che pippe)</td><td id="Qgkn" class="" style="width:424px">Slovacchia</td></tr><tr id="2067ddca-4771-80c3-86a9-d0edf7a3780e"><td id="}];&gt;" class="" style="width:386px"></td><td id="Qgkn" class="" style="width:424px">Croazia</td></tr></tbody></table><p id="2067ddca-4771-8007-a4ee-d82f4f0a30ca" class="">Morti civili oltre il 50% del totale, rispetto al 5% della prima.<br/><br/>Teatro del conflitto non solo Europeo ma mondiale, comprendendo quasi tutti i continenti a parte il Sud America.<br/><br/>Al fine della guerra vi fu una profonda trasformazione degli equilibri internazionali ancora più radicale rispetto a quelli de 1918, dove il mondo divenne ancor più polarizzato.<br/></p><h2 id="af59dc94-dc49-4d2a-8b95-2c4515c7a393" class="block-color-gray_background"><strong>Preguerra e politica di appeasement (1938-1939)</strong></h2><h3 id="8c427fe6-da30-4300-9ca0-1b3061f1445e" class=""><strong>La politica di appeasement</strong></h3><ul id="eaec61ee-1428-480f-a22b-673a7a4bb13b" class="bulleted-list"><li style="list-style-type:disc"><strong>1938</strong>:<ul id="e53c4d58-0ef6-4b63-bdda-34a3636ff8c4" class="bulleted-list"><li style="list-style-type:circle"><strong>Anschluss</strong> (marzo): Germania annette l’Austria senza resistenza internazionale.</li></ul><ul id="b2842026-ffd8-4256-ab16-345f41116d4b" class="bulleted-list"><li style="list-style-type:circle"><strong>Crisi dei Sudeti</strong> (settembre): Hitler rivendica i territori cechi con minoranza tedesca.<ul id="11becd8d-9dfd-4a51-b45a-b65354edd676" class="bulleted-list"><li style="list-style-type:square"><strong>Conferenza di Monaco</strong> (29-30 settembre): Francia (Daladier) e UK (Chamberlain) cedono alla Germania i Sudeti, credendo di evitare la guerra (&quot;pace per la nostra tempo&quot;).</li></ul><ul id="1e8fc466-a0c5-4224-ab12-c70393e6f7cb" class="bulleted-list"><li style="list-style-type:square">L’URSS e la Cecoslovacchia sono escluse dagli accordi.</li></ul></li></ul></li></ul><ul id="fb807f01-029b-47ac-a6bc-e3f60c3df1d4" class="bulleted-list"><li style="list-style-type:disc"><strong>1939</strong>:<ul id="2666fda5-f4b3-4fb3-8e5f-6a70b6aff08c" class="bulleted-list"><li style="list-style-type:circle"><strong>Marzo</strong>: Germania occupa la <strong>Boemia e Moravia</strong> (violazione di Monaco); fine dell’appeasement.</li></ul><ul id="228c8187-d36a-45f4-bf8f-4b4fc13a2d13" class="bulleted-list"><li style="list-style-type:circle"><strong>Patto Molotov-Ribbentrop</strong> (23 agosto): Patto di non aggressione nazi-sovietico con clausola segreta per spartirsi la Polonia.</li></ul><ul id="5acaba71-ae29-4b4b-800c-b22906185a36" class="bulleted-list"><li style="list-style-type:circle"><strong>1 settembre</strong>: Invasione della Polonia; inizio della WWII.</li></ul></li></ul><h3 id="d0fab622-c797-4439-818f-15b5e08036d9" class=""><strong>Fallimento dell’appeasement</strong></h3><ul id="9f8bf506-5264-4176-af6b-975c4142c617" class="bulleted-list"><li style="list-style-type:disc"><strong>Motivi</strong>:<ul id="6d7ef9a2-8cb2-4eb9-8f81-b731adf7ed0d" class="bulleted-list"><li style="list-style-type:circle">Paesi occidentali temono un nuovo conflitto dopo il trauma della WW1.</li></ul><ul id="731371d1-3494-4ad2-8b31-0963f01b6b33" class="bulleted-list"><li style="list-style-type:circle">Sottovalutazione delle ambizioni hitleriane (si credeva volesse solo revisionare Versailles).</li></ul><ul id="f9a4ed51-bacf-4813-a894-6be035d2c495" class="bulleted-list"><li style="list-style-type:circle">Anticomunismo: alcuni vedono la Germania come baluardo contro l’URSS.</li></ul></li></ul><ul id="60d35abe-781c-413e-8b8f-8d3e4f25456d" class="bulleted-list"><li style="list-style-type:disc"><strong>Conseguenze</strong>:<ul id="7836b985-f298-4a75-bb40-a5833b6ab5c5" class="bulleted-list"><li style="list-style-type:circle">Hitler interpreta la debolezza alleata come via libera all’espansione.</li></ul><ul id="5942f274-682d-4d75-a2b1-721ef32213ce" class="bulleted-list"><li style="list-style-type:circle">Isolamento dell’URSS, che firma il patto con la Germania.</li></ul></li></ul><h2 id="111c6174-ab44-42ea-b81f-15488364f4ad" class="block-color-gray_background"><strong>La Shoah (Olocausto)</strong></h2><h3 id="24ef4933-f2c1-4b84-bc13-35fd7c2f82cb" class=""><strong>1933-1939: Persecuzione iniziale</strong></h3><ul id="21f9269f-2409-4fc0-9381-e157b7594fca" class="bulleted-list"><li style="list-style-type:disc"><strong>1933-1935</strong>: Leggi razziali in Germania (es. Leggi di Norimberga, 1935), esclusione degli ebrei dalla vita pubblica.</li></ul><ul id="966212a4-dd6b-4cd0-bad7-5783e3f21cfa" class="bulleted-list"><li style="list-style-type:disc"><strong>1938</strong>: <strong>Notte dei cristalli</strong> (9-10 novembre), pogrom organizzato con distruzione di sinagoghe e arresti di massa.</li></ul><h3 id="1c6c2657-448d-49c2-a072-574311374913" class=""><strong>1939-1941: Ghetti e pianificazione</strong></h3><ul id="445aaf4a-73f2-4e90-ae1b-64bbc2187c9e" class="bulleted-list"><li style="list-style-type:disc"><strong>1939-1941</strong>: Creazione di <strong>ghetti</strong> in Polonia (es. Varsavia, Łódź) per segregare gli ebrei.</li></ul><ul id="b0471ebc-6efa-40ef-8144-002278482042" class="bulleted-list"><li style="list-style-type:disc"><strong>1941</strong>: Inizio delle <strong>esecuzioni di massa</strong> da parte degli Einsatzgruppen nell’URSS occupata.</li></ul><h3 id="ec141909-f6d0-4c44-9bde-1edfc8d23541" class=""><strong>1942-1945: Soluzione finale</strong></h3><ul id="c14a1a71-7b96-46db-a328-314f9f5f8feb" class="bulleted-list"><li style="list-style-type:disc"><strong>1942</strong>: Conferenza di Wannsee (20 gennaio), organizzazione sistematica dello sterminio.</li></ul><ul id="9431c548-c752-4d8b-af8d-c3c845ed4cc9" class="bulleted-list"><li style="list-style-type:disc"><strong>1942-1944</strong>: Deportazioni verso <strong>campi di sterminio</strong> (Auschwitz, Treblinka, Sobibór, ecc.); uso di camere a gas.</li></ul><ul id="9c6853f2-5cfc-4223-8b2e-d646a5552d04" class="bulleted-list"><li style="list-style-type:disc"><strong>1943</strong>: <strong>Rivolta del ghetto di Varsavia</strong> (aprile-maggio), resistenza ebraica armata.</li></ul><ul id="27ebb55b-ad91-41e0-96f2-36867eb85b3e" class="bulleted-list"><li style="list-style-type:disc"><strong>1944-1945</strong>: Marce della morte verso l’interno della Germania durante l’avanzata alleata.</li></ul><ul id="c4133666-0f29-4186-86f7-fedc9e13f6a7" class="bulleted-list"><li style="list-style-type:disc"><strong>Bilancio</strong>: 6 milioni di ebrei uccisi, oltre 5 milioni di altre vittime (rom, disabili, omosessuali, oppositori politici).</li></ul><hr id="87774b51-f5b7-4f79-8a60-ec7f47c482bf"/><h2 id="e2f459ad-516e-4aa1-9487-ccb42bc4a1b1" class="block-color-gray_background"><strong>La Resistenza in Europa</strong></h2><h3 id="6f3068f8-723a-4b72-aca3-ed0948d390d7" class=""><strong>Forme di resistenza</strong></h3><ul id="576a06db-7ed8-43f2-ac62-827f261999a2" class="bulleted-list"><li style="list-style-type:disc"><strong>Armata</strong>: Gruppi partigiani (es. <strong>Resistenza italiana</strong>, <strong>Maquis francesi</strong>, <strong>Partigiani jugoslavi</strong> di Tito).</li></ul><ul id="43557acf-860e-4b9e-b320-cbbd497f394f" class="bulleted-list"><li style="list-style-type:disc"><strong>Civile</strong>: Sabotaggi, stampa clandestina, salvataggio di ebrei (es. rete <strong>Delasem</strong> in Italia).</li></ul><ul id="39dd52b1-13e3-4b55-9676-cf0b79032f7c" class="bulleted-list"><li style="list-style-type:disc"><strong>Intelligence</strong>: Supporto agli Alleati (es. <strong>SOE britannico</strong>, <strong>Resistenza polacca</strong>).</li></ul><h3 id="4cea5481-91f0-427e-80da-55fbedec6793" class=""><strong>Eventi principali</strong></h3><ul id="f127f014-f657-4be2-bb61-a0e01a3ce241" class="bulleted-list"><li style="list-style-type:disc"><strong>1941-1943</strong>: Formazione dei primi nuclei partigiani in URSS, Jugoslavia e Grecia.</li></ul><ul id="44f122a7-e59c-435c-bf5e-c1885854f276" class="bulleted-list"><li style="list-style-type:disc"><strong>1943-1944</strong>:<ul id="724d8c5d-1366-4b81-af3b-c387b4d9fcf8" class="bulleted-list"><li style="list-style-type:circle"><strong>Italia</strong>: Dopo l’8 settembre, formazione del <strong>CLN (Comitato Liberazione Nazionale)</strong>; battaglie come <strong>Montefiorino</strong> e <strong>repubblica partigiana dell’Ossola</strong>.</li></ul><ul id="d9864719-4381-4a41-aca1-08b853e94260" class="bulleted-list"><li style="list-style-type:circle"><strong>Francia</strong>: Rafforzamento dei Maquis; <strong>Liberazione di Parigi</strong> (agosto 1944) con ruolo attivo della Resistenza.</li></ul></li></ul><ul id="e43e32c9-fb35-46ca-b16d-3c254ae6c306" class="bulleted-list"><li style="list-style-type:disc"><strong>1944</strong>: <strong>Rivolta di Varsavia</strong> (agosto-ottobre), soffocata dai nazisti con 200.000 morti.</li></ul><ul id="0e1998e3-268a-4985-bf6d-7cbb8e8b9db7" class="bulleted-list"><li style="list-style-type:disc"><strong>1945</strong>: Insurrezioni finali in Italia (es. <strong>Bologna</strong>, <strong>Milano</strong>) e Germania.</li></ul><h3 id="9cbe1303-3b03-4ff3-a078-8d27f81422c1" class="block-color-gray_background"><strong>WW2 - Eventi in breve</strong></h3><h3 id="757ec12b-f240-451d-85c8-df113cc28286" class=""><strong>1939 - Inizio della guerra</strong></h3><ul id="37e588c5-9718-41ee-9697-02b19b5a5f05" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE EUROPEO ORIENTALE</strong><ul id="3792d49c-9e98-41f9-8d0a-31fe9ab28649" class="bulleted-list"><li style="list-style-type:circle"><strong>INVASIONE DELLA POLONIA (1 settembre)</strong><ul id="1cc2eec2-0735-4e81-a6c7-f154bfbb8c7b" class="bulleted-list"><li style="list-style-type:square">3 settembre: Regno Unito e Francia dichiarano guerra alla Germania.</li></ul><ul id="2564ec27-1ce1-41be-9d92-c0b5696bd8bd" class="bulleted-list"><li style="list-style-type:square">17 settembre: L&#x27;URSS invade la Polonia orientale (Patto Molotov-Ribbentrop).</li></ul><ul id="6a58f849-9ccb-4976-80c0-569d0220bb12" class="bulleted-list"><li style="list-style-type:square">28 settembre: Resa di Varsavia; spartizione della Polonia tra Germania e URSS.</li></ul></li></ul></li></ul><ul id="e12c25cd-92d1-484f-b970-bc558d4f4b74" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE NORDICO</strong><ul id="a7975b84-c611-4b84-a85d-117efa07598b" class="bulleted-list"><li style="list-style-type:circle">30 novembre: Inizia la &quot;Guerra d&#x27;inverno&quot; tra URSS e Finlandia.</li></ul></li></ul><h3 id="6a012cca-e869-4af2-ad14-af8621894805" class=""><strong>1940 - Caduta del continente</strong></h3><ul id="a50735e4-be78-4b39-b196-bdbfc27e9bbb" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE OCCIDENTALE</strong><ul id="10362b2a-dde4-4677-960b-6c3815198498" class="bulleted-list"><li style="list-style-type:circle"><strong>INVASIONE DELLA FRANCIA E PAESI BASSI</strong><ul id="f1563f34-8707-4a9e-89e3-c403687f2866" class="bulleted-list"><li style="list-style-type:square">Aprile: Occupazione tedesca di Danimarca e Norvegia (Operazione Weserübung).</li></ul><ul id="6d4f7b99-4890-40db-b6ec-685d267eb621" class="bulleted-list"><li style="list-style-type:square">Maggio: Blitzkrieg su Belgio, Olanda e Lussemburgo; evacuazione alleata a Dunkerque.</li></ul><ul id="11b6d011-3cc8-4729-ad48-6e344ec49b6b" class="bulleted-list"><li style="list-style-type:square">22 giugno: Armistizio di Compiègne; Francia divisa in zona occupata e regime di Vichy.</li></ul></li></ul></li></ul><ul id="491521ad-addd-4557-b6d5-be87c2dfcd97" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE MEDITERRANEO</strong><ul id="56bd8a36-bcd4-48d2-83a6-91b359df8947" class="bulleted-list"><li style="list-style-type:circle">10 giugno: L&#x27;Italia entra in guerra a fianco della Germania.</li></ul></li></ul><ul id="c482404d-73e7-40a8-84f2-08f6b0561d64" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE AEREO BRITANNICO</strong><ul id="2f5fc501-4cf3-49c7-bf84-3b5093be6aee" class="bulleted-list"><li style="list-style-type:circle">Luglio-ottobre: Battaglia d&#x27;Inghilterra (fallimento dell&#x27;Operazione Leone Marino).</li></ul></li></ul><h3 id="97a07547-fb05-4e42-8334-8631fd7970ec" class=""><strong>1941 - L’espansione dei conflitti</strong></h3><ul id="c69f4fdd-cc28-4a07-af4e-6fdecef38395" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE ORIENTALE</strong><ul id="03273859-eff1-40ea-b052-3b28b1a85c01" class="bulleted-list"><li style="list-style-type:circle"><strong>INVASIONE DELL’UNIONE SOVIETICA</strong><ul id="017e9a46-a824-42c4-9d18-ea825cada994" class="bulleted-list"><li style="list-style-type:square">22 giugno: Operazione Barbarossa; la Germania invade l&#x27;URSS.</li></ul><ul id="080073fb-f95e-41e0-918c-cc92be690872" class="bulleted-list"><li style="list-style-type:square">Dicembre: Controffensiva sovietica a Mosca; blocco dell&#x27;avanzata tedesca.</li></ul></li></ul></li></ul><ul id="f39aab76-2bf0-4ff0-8bd5-8fbd06ec11cc" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE DEL PACIFICO</strong><ul id="7cf94b5b-9138-4d9d-84be-d973d4238563" class="bulleted-list"><li style="list-style-type:circle"><strong>ATTACCO A PEARL HARBOR</strong><ul id="72991b1c-f5c0-4f14-a947-77add8b49129" class="bulleted-list"><li style="list-style-type:square">7 dicembre: Attacco giapponese a Pearl Harbor; USA entrano in guerra.</li></ul><ul id="30efe965-c013-4285-a373-44c9f5c8b704" class="bulleted-list"><li style="list-style-type:square">11 dicembre: Germania e Italia dichiarano guerra agli USA.</li></ul></li></ul></li></ul><ul id="a24ee093-b55d-48b8-9111-30923303de47" class="bulleted-list"><li style="list-style-type:disc"><strong>ALLEATI OCCIDENTALI</strong><ul id="d88016a5-db70-4917-8676-054d94719087" class="bulleted-list"><li style="list-style-type:circle">Agosto: Carta Atlantica (Roosevelt-Churchill) per definire obiettivi post-bellici.</li></ul></li></ul><h3 id="b55b6805-fb08-474e-b433-24a6314c5bb6" class=""><strong>1942 - La svolta nel conflitto</strong></h3><ul id="b49fd124-3eec-4257-8fba-52494a164f8d" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE DEL PACIFICO</strong><ul id="3d7dccf4-d52d-4ef5-86cf-cd6909144ecc" class="bulleted-list"><li style="list-style-type:circle">Giugno: <strong>Battaglia di Midway</strong> (USA distruggono 4 portaerei giapponesi; svolta nel Pacifico).</li></ul></li></ul><ul id="72036d29-b217-41d0-b039-736573b6b65c" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE ORIENTALE</strong><ul id="b8f2c125-91a4-49c7-9423-8ced3741bf42" class="bulleted-list"><li style="list-style-type:circle">Agosto: Inizio <strong>battaglia di Stalingrado</strong> (accerchiamento tedesco fallito).</li></ul></li></ul><ul id="6605ac37-62a2-43e9-8af7-c88be691954d" class="bulleted-list"><li style="list-style-type:disc"><strong>CAMPAGNA DEL NORD AFRICA</strong><ul id="101f77c9-0476-4717-8450-4dd3254125c9" class="bulleted-list"><li style="list-style-type:circle">Ottobre: Vittoria britannica a <strong>El Alamein</strong> (Egitto); ritirata dell&#x27;Afrika Korps.</li></ul><ul id="1520cc3a-fef9-4243-933f-d85a24c533d4" class="bulleted-list"><li style="list-style-type:circle">Novembre: Sbarco alleato in Nord Africa (Operazione Torch).</li></ul></li></ul><h3 id="760f4713-c90b-4f11-b20f-81e0acdb400c" class=""><strong>1943 - La liberazione in Italia e le sconfitte giapponesi</strong></h3><ul id="07386296-c075-4620-b5eb-061fbe7d6f87" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE ORIENTALE</strong><ul id="68b5c82e-2b13-4f88-925a-e7b938f2ae44" class="bulleted-list"><li style="list-style-type:circle">Febbraio: Resa tedesca a <strong>Stalingrado</strong> (prima grande sconfitta dell&#x27;Asse).</li></ul></li></ul><ul id="2abb806c-2607-4673-b358-ed3710c1c82c" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE ITALIANO</strong><ul id="9d333345-4181-42c5-b555-03a86698c6df" class="bulleted-list"><li style="list-style-type:circle">Luglio: <strong>Sbarco in Sicilia</strong> (Operazione Husky); caduta di Mussolini (25 luglio).</li></ul><ul id="4fca2eec-d99e-429d-a5e3-e7d4501e402d" class="bulleted-list"><li style="list-style-type:circle">Settembre: <strong>Armistizio italiano</strong> (8 settembre); Germania occupa l&#x27;Italia settentrionale.</li></ul></li></ul><ul id="ea4afbcc-2ad5-4639-a6da-083db67ee85e" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE DEL PACIFICO</strong><ul id="8eaa0e98-c2f7-4430-a78d-6f42110c2614" class="bulleted-list"><li style="list-style-type:circle">Vittoria USA a Guadalcanal; isolamento del Giappone.</li></ul></li></ul><ul id="25b57348-3cf2-49a7-aa25-7549485b643a" class="bulleted-list"><li style="list-style-type:disc"><strong>CONFERENZE ALLEATE</strong><ul id="02bf04ce-0bd4-4ae9-bba2-f9e6b2912a8d" class="bulleted-list"><li style="list-style-type:circle">Novembre: Conferenza di Teheran (coordinamento USA-UK-URSS).</li></ul></li></ul><h3 id="2f446f03-ac77-4955-af22-53f20a825102" class=""><strong>1944 - Il crollo dell’Asse</strong></h3><ul id="8c1fa57e-1b5e-4ba3-ad1d-4dc4f525221b" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE OCCIDENTALE</strong><ul id="e071607d-1c1d-4a08-a312-c2c78c1578eb" class="bulleted-list"><li style="list-style-type:circle"><strong>LIBERAZIONE DELLA FRANCIA</strong><ul id="3f189abc-5a18-4a1d-a472-34a53c06fc9a" class="bulleted-list"><li style="list-style-type:square">6 giugno: <strong>Sbarco in Normandia</strong> (D-Day).</li></ul><ul id="0dbcc122-b52b-41da-b2ba-32408953459a" class="bulleted-list"><li style="list-style-type:square">Agosto: <strong>Liberazione di Parigi</strong> (25 agosto).</li></ul><ul id="b58219ab-2668-4d04-9a8a-5067e9dabbbc" class="bulleted-list"><li style="list-style-type:square">Dicembre: Offensiva tedesca nelle Ardenne (ultima controffensiva).</li></ul></li></ul></li></ul><ul id="2ae5b724-f072-4814-9f26-503b9455c26c" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE ITALIANO</strong><ul id="8c3a1803-b03f-4b00-aca1-69107a256aee" class="bulleted-list"><li style="list-style-type:circle">Giugno: Presa di Roma; linea Gustav sfondata a Montecassino.</li></ul></li></ul><ul id="c4f68d83-816c-4e4e-87c5-00b80211f9c0" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE DEL PACIFICO</strong><ul id="416db3fc-72a3-42cd-a7f4-d2267c05c917" class="bulleted-list"><li style="list-style-type:circle">Ottobre: Sbarco USA nelle Filippine; <strong>battaglia del Golfo di Leyte</strong> (distruzione marina giapponese).</li></ul></li></ul><h3 id="bd8a8d67-1ed5-401d-bd2e-eba5b954fd8f" class=""><strong>1945 - Sconfitta dell’Asse</strong></h3><ul id="856cf0ff-b3f2-49b9-beb4-10991dfbb9e5" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE EUROPEO ORIENTALE</strong><ul id="5959ca7a-2b74-4024-a057-dc33d82684d5" class="bulleted-list"><li style="list-style-type:circle">Aprile: <strong>Battaglia di Berlino</strong>; suicidio di Hitler (30 aprile).</li></ul></li></ul><ul id="9c7130d5-ab7d-4901-a924-1c7bb9839045" class="bulleted-list"><li style="list-style-type:disc"><strong>RESA DELLA GERMANIA</strong><ul id="ae3d0ccb-4cd1-4126-8519-7bb705898967" class="bulleted-list"><li style="list-style-type:circle">8 maggio: <strong>Resa incondizionata della Germania</strong> (fine guerra in Europa).</li></ul></li></ul><ul id="a0771857-e75d-476f-a553-d9d6ff2c5f54" class="bulleted-list"><li style="list-style-type:disc"><strong>FRONTE DEL PACIFICO</strong><ul id="79a66dec-7a74-4c6c-9ed9-3a37c4b6e193" class="bulleted-list"><li style="list-style-type:circle"><strong>FINE DEL CONFLITTO</strong><ul id="7a927ad5-16d0-4474-8c0d-6e2d650f7619" class="bulleted-list"><li style="list-style-type:square">6 e 9 agosto: <strong>Bombe atomiche su Hiroshima e Nagasaki</strong>.</li></ul><ul id="41ebd0a8-53ce-4f17-9314-1d0f821a5ebd" class="bulleted-list"><li style="list-style-type:square">2 settembre: <strong>Resa del Giappone</strong> a bordo della USS Missouri.</li></ul></li></ul></li></ul><ul id="0965d0ca-e4b2-4dcf-b378-840cd787ca84" class="bulleted-list"><li style="list-style-type:disc"><strong>ASSETTO POST-BELLICO</strong><ul id="c523e6fd-60c1-407e-93be-68cabbeea746" class="bulleted-list"><li style="list-style-type:circle">Conferenze di Yalta e Potsdam: ridefinizione degli equilibri globali.</li></ul></li></ul><h3 id="2097ddca-4771-8054-a0cb-f180b77ac60a" class="">Breve video per riassumere la guerra in Europa</h3><figure id="2097ddca-4771-80e5-b2d2-c1210b17f316"><div class="source"><a href="SECONDA%20GUERRA%20MONDIALE%201f87ddca4771809fae14fa8e73e3f09a/lxNUFsoJHE0amV5C4YQFg-7oIAsqGTNxiOxBK0iVHX4.mp4">attachment:5c485a1f-ecc1-4e56-85a8-ac405cc47352:lxNUFsoJHE0amV5C4YQFg-7oIAsqGTNxiOxBK0iVHX4.mp4</a></div></figure><p id="2097ddca-4771-80e9-8327-c9962e768ca6" class="">
+</p><h1 id="2067ddca-4771-80a5-842a-f4fccb604bc4" class="">BIPOLARISMO</h1><ul id="11cb0728-878e-4abc-8bc5-16a94ac586df" class="bulleted-list"><li style="list-style-type:disc">La pace e il nuovo assetto politico<ul id="1b665e93-5bc0-411a-b351-7b4601e06ebc" class="bulleted-list"><li style="list-style-type:circle">Due super potenze con modelli opposte</li></ul><ul id="cf97799c-1166-4b5f-b117-7557c718dbed" class="bulleted-list"><li style="list-style-type:circle">Nasce necessità di ordine internazionale → ONU</li></ul><ul id="b8e95e0d-313f-4c2e-af6d-8075a435c9a7" class="bulleted-list"><li style="list-style-type:circle">Processo di Norimberga</li></ul><ul id="2e1030bb-09fa-43c4-b2a5-70f3b42e57d4" class="bulleted-list"><li style="list-style-type:circle">Accordi di Bretton Woods → coordinamento economico</li></ul></li></ul><ul id="881840c8-e2f9-41c7-abc3-71d27a3df95c" class="bulleted-list"><li style="list-style-type:disc">Inizio guerra fredda<ul id="311e450f-d605-4b13-a119-51943f0eaf99" class="bulleted-list"><li style="list-style-type:circle">C’era una cortina di ferro che divideva il continente </li></ul><ul id="61310f88-1682-4b81-a26a-19f11111ce1b" class="bulleted-list"><li style="list-style-type:circle">Nel 46 Crisi turca URSS voleva controllare stretto Dardanelli</li></ul><ul id="5c0ad648-5989-498c-a3ef-5e5ac40c8028" class="bulleted-list"><li style="list-style-type:circle">Guerra civile in Grecia</li></ul><ul id="f792fb4e-8916-494b-9c44-533c181c300f" class="bulleted-list"><li style="list-style-type:circle">Truman interviene con aiuti economici e militari verso gli anticomunisti</li></ul><ul id="b83425dc-1412-4ebf-9e9f-a6979efcbe09" class="bulleted-list"><li style="list-style-type:circle">Secondo Kennan serviva contenere il comunismo (impossibile il dialogo)</li></ul><ul id="cd383fa1-2c42-4202-b9a8-84189499cbbd" class="bulleted-list"><li style="list-style-type:circle">Nasce la dottrina Truman → Dispensatori di libertà e democrazia → legittimazione intervento poltico, economico e militare</li></ul><ul id="84ae13dc-2986-4ffe-b675-998f0a1a2d97" class="bulleted-list"><li style="list-style-type:circle">Nasce la “Guerra Fredda”</li></ul></li></ul><ul id="dcdbc054-b2f1-4994-b877-40e1ff163a2a" class="bulleted-list"><li style="list-style-type:disc">Bipolarismo in Europa<ul id="81cabaa0-0e97-4b07-8802-39735e3fea4f" class="bulleted-list"><li style="list-style-type:circle">Per evitare comunismo → Rilancio economia Europea → Piano marshall </li></ul><ul id="c5d3521a-dce2-4d3f-ab30-9cdb0533b8db" class="bulleted-list"><li style="list-style-type:circle">URSS per non stare dietro crea Cominform per coordinare i partiti europei</li></ul><ul id="631356fd-d7af-4f76-8f06-6a4f295c5cf2" class="bulleted-list"><li style="list-style-type:circle">URSS crea Comecon per collegare le economie dell’Est.</li></ul><ul id="cde3abe1-4174-4434-8a28-2d8f2cbf0c34" class="bulleted-list"><li style="list-style-type:circle">Tutti i paesi satelliti non accettarono il piano marshall<ul id="8e834178-33f3-4100-ad22-18d9ede32341" class="bulleted-list"><li style="list-style-type:square">Piano Americano da soldi; Comecon riceve soldi</li></ul></li></ul><ul id="5e4abb09-bd75-4be0-a4c4-0c307be5d32c" class="bulleted-list"><li style="list-style-type:circle">Alleati rendono parte ovest Germania una nazione autosufficente (ostile al comunismo)</li></ul><ul id="38f2d41a-4294-4520-8b6a-9d16c03880c2" class="bulleted-list"><li style="list-style-type:circle">Mosca (pensava che sarebbe rimasta loro) blocca berlino e la divide in due</li></ul><ul id="6f3c2f05-9d06-40f2-82d2-cd5dc9550c7b" class="bulleted-list"><li style="list-style-type:circle">Alleati creano ponte aereo e quindi si creano due stati<ul id="94ccfe52-d775-464b-94b2-74126d2fc72a" class="bulleted-list"><li style="list-style-type:square">Repbblica federale tedesca</li></ul><ul id="921c7059-01f7-4b96-aee2-7de89ba96727" class="bulleted-list"><li style="list-style-type:square">Repubblica democratica tedesca</li></ul></li></ul><ul id="45f06565-93ed-49d2-b3f6-44a0d579c10f" class="bulleted-list"><li style="list-style-type:circle">USA fa la NATO → URSS fa patto di Varsavia</li></ul></li></ul><ul id="d7c5cd6b-ca09-4164-90f8-d6cd6b7ba68a" class="bulleted-list"><li style="list-style-type:disc">Sfera di influenza URSS<ul id="2df24d6d-ac26-4a75-9d5d-c32ed905eaa2" class="bulleted-list"><li style="list-style-type:circle">Repressione ogni dissidenza e alimentazione culto di stalin</li></ul><ul id="101382ba-2bc0-407d-b74e-0850dd1be9e7" class="bulleted-list"><li style="list-style-type:circle">Sfrutta le riparazioni dell’Europa orientale come risorse finanziarie</li></ul><ul id="9bb014aa-764e-432a-8a6c-a3cc44fde6bc" class="bulleted-list"><li style="list-style-type:circle">Stati satelliti subirono repressione, terrore e violenza mascherato da democrazia pop<ul id="05590b18-abad-42e5-9242-dfc9757925f8" class="bulleted-list"><li style="list-style-type:square">Sistema a partito unico</li></ul></li></ul><ul id="c2fdf033-0831-4286-814f-c8bcb2965513" class="bulleted-list"><li style="list-style-type:circle">non tolleranti di ogni forma di dissenso</li></ul><ul id="684155e5-7ea0-4938-859c-b851b713911a" class="bulleted-list"><li style="list-style-type:circle">Il passaggio alla Cecoslovacchia fu tragico, Quello della iugoslavia no</li></ul><ul id="d69ad1ad-ef3d-4701-b542-96c450c4edc7" class="bulleted-list"><li style="list-style-type:circle">Tito rompe i rapporti con URSS e sperimetò alternativa al socialismo </li></ul></li></ul><ul id="a25a9a37-0d1f-47c5-93ed-c54ac75e18fb" class="bulleted-list"><li style="list-style-type:disc">Situazione JP<ul id="f3a8a236-23fe-4d98-92c7-9a373517155b" class="bulleted-list"><li style="list-style-type:circle">Regime di occupazione statunitense → costruzione di uno stato su modello occidentale</li></ul><ul id="3fe177a7-28e0-465b-88ec-7495c34e7227" class="bulleted-list"><li style="list-style-type:circle">Volevano fare un rilancio economico</li></ul><ul id="c31a3a67-d592-44f5-a464-a17dff13cee9" class="bulleted-list"><li style="list-style-type:circle">Rimase la figura dell’imperatore, ma tolto di potere</li></ul></li></ul><ul id="2fafa6fc-8b26-42f5-8367-3c1e41d30671" class="bulleted-list"><li style="list-style-type:disc">Situazione Cina - Taiwan le origini<ul id="4d7c1835-ddf0-4987-bab7-a12a9863da6a" class="bulleted-list"><li style="list-style-type:circle">Ricomincia conflitto tra Mao e rivale nazionalista</li></ul><ul id="b2c788ee-cfa1-44ad-9cda-b9d64e7b2835" class="bulleted-list"><li style="list-style-type:circle">Nel 49 prevalgono con la mobilitazione dei contadini</li></ul><ul id="59b1dfe9-f3de-4179-8924-8466555008c5" class="bulleted-list"><li style="list-style-type:circle">Nasce la Rep. pop. Cinese → affronta difficoltà ma non riesce con il “grande balzo avanti” (piano di Mao)</li></ul><ul id="e937bf8c-444c-46c8-b5c6-8899fe54b954" class="bulleted-list"><li style="list-style-type:circle">Peggiora il tutto la rottura con l’URSS</li></ul><ul id="90bd3c0d-18d5-4033-abe8-66f8c90660b6" class="bulleted-list"><li style="list-style-type:circle">Rivale nazionalista sconfitto si sposta nelle isole di formosa (Taiwan)</li></ul></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

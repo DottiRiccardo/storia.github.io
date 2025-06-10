@@ -1,0 +1,683 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>La Rivoluzione Russa</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2037ddca-4771-8004-8909-ccc43a06949c" class="page sans"><header><h1 class="page-title">La Rivoluzione Russa</h1><p class="page-description"></p></header><div class="page-body"><h3 id="2087ddca-4771-804a-bc93-e1ffc7b05dd5" class=""><strong>SITUAZIONE DELL’IMPERO RUSSO NEL 1917</strong></h3><p id="2087ddca-4771-800d-979b-e42e9118daeb" class=""><strong>Contesto critico dopo 4 anni di guerra contro l’Impero tedesco:</strong></p><ul id="2087ddca-4771-80c8-9daa-fa2bb33b5414" class="bulleted-list"><li style="list-style-type:disc">Mancanza di capacità industriale per sostenere uno sforzo bellico con 12 milioni di uomini</li></ul><ul id="2087ddca-4771-80e4-a3bf-e61d39a8ff61" class="bulleted-list"><li style="list-style-type:disc">Malcontento delle masse popolari per la mancanza di risorse</li></ul><ul id="2087ddca-4771-807c-8a79-dd98898f1ab5" class="bulleted-list"><li style="list-style-type:disc">Molteplici sconfitte militari</li></ul><ul id="2087ddca-4771-80ea-9b84-e5dd69cb8a90" class="bulleted-list"><li style="list-style-type:disc">Frattura dell’aristocrazia con spinte liberali<ul id="2087ddca-4771-80b0-9c3c-cd1c34c13af6" class="bulleted-list"><li style="list-style-type:circle">Guida del principe L’vov per dare potere al parlamento</li></ul></li></ul><hr id="2087ddca-4771-8052-b5b1-eacda9024983"/><h3 id="2087ddca-4771-80a1-80c6-f55a012ea20f" class=""><strong>MARZO 1917 (Calendario Gregoriano)</strong></h3><p id="2087ddca-4771-8043-8910-ea1f4d226d82" class=""><strong>Rivolta di Pietrogrado:</strong></p><ul id="2087ddca-4771-80ba-9b65-c3796f92083f" class="bulleted-list"><li style="list-style-type:disc">Masse popolari manifestano in piazza</li></ul><ul id="2087ddca-4771-8058-97af-d22dd65b6a43" class="bulleted-list"><li style="list-style-type:disc">Truppe del governo disertano e si uniscono alla folla</li></ul><ul id="2087ddca-4771-800c-888e-c6858cd974eb" class="bulleted-list"><li style="list-style-type:disc">Riformazione dei Soviet (unioni dei lavoratori, già viste nel 1905)</li></ul><p id="2087ddca-4771-80ad-9034-e3e7f145c929" class=""><strong>Creazione Governo Provvisorio:</strong></p><ul id="2087ddca-4771-8039-89f8-d580d1159e29" class="bulleted-list"><li style="list-style-type:disc">La Duma istituisce un governo provvisorio<ul id="2087ddca-4771-80e2-8de9-dae371399e88" class="bulleted-list"><li style="list-style-type:circle">Presidente: Principe L’vov</li></ul><ul id="2087ddca-4771-800b-ac0d-e0efda30f654" class="bulleted-list"><li style="list-style-type:circle">Composizione: Menscevichi e Socialisti Rivoluzionari</li></ul></li></ul><ul id="2087ddca-4771-8083-9137-d6f50dfde679" class="bulleted-list"><li style="list-style-type:disc">Abdicazione dello Zar Nicola II (rifugio a Ekaterinburg)</li></ul><p id="2087ddca-4771-8008-86a1-d50b1f5c63fe" class=""><strong>Divisioni nel Governo:</strong></p><ul id="2087ddca-4771-800e-b72a-dbc7c12b9d6e" class="bulleted-list"><li style="list-style-type:disc">‘Cadetti’ → monarchia costituzionale</li></ul><ul id="2087ddca-4771-80dc-93f2-d5f97706aa47" class="bulleted-list"><li style="list-style-type:disc">Menscevichi e Socialisti Rivoluzionari → repubblica costituzionale e riforma agraria</li></ul><hr id="2087ddca-4771-804f-bd92-f6549c0c6440"/><h3 id="2087ddca-4771-803b-a1d2-fbe64e4b7de6" class=""><strong>APRILE 1917 (Calendario Ortodosso)</strong></h3><p id="2087ddca-4771-807a-93cb-f8e80b59466e" class=""><strong>Ritorno di Lenin (dall’esilio in Finlandia):</strong></p><ul id="2087ddca-4771-8022-ba68-decbe235ef74" class="bulleted-list"><li style="list-style-type:disc">Programma:<ul id="2087ddca-4771-8050-9f78-d6b26dacebd2" class="bulleted-list"><li style="list-style-type:circle">Potere ai Soviet</li></ul><ul id="2087ddca-4771-80e5-8d59-e6cb64715d12" class="bulleted-list"><li style="list-style-type:circle">Opposizione alla collaborazione coi Menscevichi</li></ul><ul id="2087ddca-4771-80fc-8ae0-cd0a394bbc03" class="bulleted-list"><li style="list-style-type:circle">Piani Bolscevichi:<ul id="2087ddca-4771-80cd-bd9b-d0840f4857c1" class="bulleted-list"><li style="list-style-type:square">Nazionalizzazione di terre, banche, imprese</li></ul><ul id="2087ddca-4771-80ac-98f5-cf44d0e4b33a" class="bulleted-list"><li style="list-style-type:square">Uscita dal conflitto bellico</li></ul></li></ul></li></ul><hr id="2087ddca-4771-8023-96c3-ea796c3fba20"/><h3 id="2087ddca-4771-8033-8090-d79f9a550d31" class=""><strong>LUGLIO 1917 (Calendario Ortodosso)</strong></h3><p id="2087ddca-4771-8054-bd15-f7e7b4df6627" class=""><strong>Proteste a Pietrogrado:</strong></p><ul id="2087ddca-4771-8090-b514-c05335522b17" class="bulleted-list"><li style="list-style-type:disc">Protagonisti: Soldati di stanza + popolazione</li></ul><ul id="2087ddca-4771-80a8-8925-d196ee367b1b" class="bulleted-list"><li style="list-style-type:disc">Richieste:<ul id="2087ddca-4771-807f-b170-c44667bff316" class="bulleted-list"><li style="list-style-type:circle">Pace</li></ul><ul id="2087ddca-4771-8064-a595-e184d6749860" class="bulleted-list"><li style="list-style-type:circle">Riforma agraria</li></ul></li></ul><ul id="2087ddca-4771-80d5-b855-d9a992b632ba" class="bulleted-list"><li style="list-style-type:disc">Appoggio bolscevico (Lenin)</li></ul><ul id="2087ddca-4771-8012-a9ac-f0fc9e3d8b69" class="bulleted-list"><li style="list-style-type:disc">Repressione da Duma e Soviet (Bolscevichi ancora minoranza)<ul id="2087ddca-4771-8008-9fbe-fd1500832856" class="bulleted-list"><li style="list-style-type:circle">Conseguenze:<ul id="2087ddca-4771-80ca-bb54-f4509fa0be4c" class="bulleted-list"><li style="list-style-type:square">Messa al bando dei Bolscevichi</li></ul><ul id="2087ddca-4771-808c-8807-c78486d9cbe2" class="bulleted-list"><li style="list-style-type:square">Lenin si rifugia in Finlandia</li></ul></li></ul></li></ul><p id="2087ddca-4771-808e-9ff6-c74f4e16c03d" class=""><strong>Ascesa di Kerenskij:</strong></p><ul id="2087ddca-4771-8028-bf70-c5c80d728e56" class="bulleted-list"><li style="list-style-type:disc">Ministro della guerra</li></ul><ul id="2087ddca-4771-8013-8a0a-da5b7f76cf2d" class="bulleted-list"><li style="list-style-type:disc">Leader Socialisti Rivoluzionari di centro</li></ul><ul id="2087ddca-4771-801a-b065-f399d7c96eaf" class="bulleted-list"><li style="list-style-type:disc">Sostituisce L’vov come capo del governo</li></ul><hr id="2087ddca-4771-80ea-a968-cd6b842775d2"/><h3 id="2087ddca-4771-8068-8f30-cb74d9d79df1" class=""><strong>AGOSTO 1917 (Calendario Ortodosso)</strong></h3><p id="2087ddca-4771-809f-aac4-d1b842f3b151" class=""><strong>Tentato Colpo di Stato (Kornilov):</strong></p><ul id="2087ddca-4771-80fe-911e-c656e8ca07d5" class="bulleted-list"><li style="list-style-type:disc">Comandante supremo dell’esercito</li></ul><ul id="2087ddca-4771-800a-bb9d-c8f7118a69f4" class="bulleted-list"><li style="list-style-type:disc">Fallimento grazie a:<ul id="2087ddca-4771-80b4-b1dc-d37e1e613c4e" class="bulleted-list"><li style="list-style-type:circle">Alleanza Kerenskij + Bolscevichi</li></ul><ul id="2087ddca-4771-80b4-8a91-dbe2882ad797" class="bulleted-list"><li style="list-style-type:circle">Ferrovieri impediscono movimenti truppe</li></ul></li></ul><hr id="2087ddca-4771-80a2-9bd8-d0632ad0f53d"/><h3 id="2087ddca-4771-8096-adbc-fd8e764f4cb8" class=""><strong>15 SETTEMBRE 1917</strong></h3><p id="2087ddca-4771-800a-975c-d8b57f8036a6" class=""><strong>Proclamazione della Repubblica:</strong></p><ul id="2087ddca-4771-8074-a69c-e21dffc9bfd2" class="bulleted-list"><li style="list-style-type:disc">Bolscevichi guadagnano influenza nel Soviet di Pietrogrado</li></ul><ul id="2087ddca-4771-80e9-9bed-f349b7eb0f9d" class="bulleted-list"><li style="list-style-type:disc">Lev Trockij diventa Presidente del Soviet (ex menscevico, ora con Lenin)</li></ul><hr id="2087ddca-4771-8014-b4b9-e99198f42a1b"/><h3 id="2087ddca-4771-808e-bf55-cb2498259d6e" class=""><strong>OTTOBRE 1917 (Calendario Ortodosso)</strong></h3><p id="2087ddca-4771-80a9-b9f9-f41622fea0b2" class=""><strong>Rivoluzione d’Ottobre:</strong></p><ul id="2087ddca-4771-806e-affd-df6bcc68e546" class="bulleted-list"><li style="list-style-type:disc">Lenin torna in Russia</li></ul><ul id="2087ddca-4771-80d9-a4de-c7d04ce0b2dc" class="bulleted-list"><li style="list-style-type:disc">Con Trockij organizza le <strong>Guardie Rosse</strong><ul id="2087ddca-4771-80e0-9c88-c864b7bd97fb" class="bulleted-list"><li style="list-style-type:circle">25-26 ottobre: occupazione Palazzo d’Inverno</li></ul><ul id="2087ddca-4771-8005-be75-fc1622db4d96" class="bulleted-list"><li style="list-style-type:circle">Presa del potere dai Bolscevichi</li></ul></li></ul><ul id="2087ddca-4771-8069-b9b1-c8c869ec9a24" class="bulleted-list"><li style="list-style-type:disc">Kerenskij fugge</li></ul><ul id="2087ddca-4771-8003-937c-ccb2bcc98813" class="bulleted-list"><li style="list-style-type:disc">Potere al Congresso panrusso dei Soviet</li></ul><p id="2087ddca-4771-8048-8a0f-d34b8a229a48" class=""><strong>Primi Decreti del Governo Bolscevico:</strong></p><ul id="2087ddca-4771-8009-adcd-f0b3f25aecf0" class="bulleted-list"><li style="list-style-type:disc"><strong>Decreto sulla pace:</strong><ul id="2087ddca-4771-8070-95fd-d08718855a31" class="bulleted-list"><li style="list-style-type:circle">“Senza annessioni e indennità”</li></ul><ul id="2087ddca-4771-809e-a2a9-f04347df1bae" class="bulleted-list"><li style="list-style-type:circle">Armistizio con la Germania (15 dicembre)</li></ul></li></ul><ul id="2087ddca-4771-80bd-8763-ee8fb3277264" class="bulleted-list"><li style="list-style-type:disc"><strong>Decreto sulla terra:</strong><ul id="2087ddca-4771-80a8-becf-c4b347d19048" class="bulleted-list"><li style="list-style-type:circle">Ridistribuzione delle proprietà di Zar, Chiesa, nobiltà ai contadini</li></ul></li></ul><hr id="2087ddca-4771-80de-aa8a-f9687d01b296"/><h3 id="2087ddca-4771-806d-9a2f-edd3246e1829" class=""><strong>NOVEMBRE 1917 – ELEZIONI COSTITUENTE</strong></h3><ul id="2087ddca-4771-8067-87bd-d54dc77de4d6" class="bulleted-list"><li style="list-style-type:disc">Risultati:<ul id="2087ddca-4771-807b-992c-ef90c5c2fd4e" class="bulleted-list"><li style="list-style-type:circle">Bolscevichi: 24%</li></ul><ul id="2087ddca-4771-807d-b8eb-d303c1d6f076" class="bulleted-list"><li style="list-style-type:circle">Vittoria dei Socialisti Rivoluzionari (Kerenskij)</li></ul></li></ul><ul id="2087ddca-4771-80b2-a15c-cb69895b4aa4" class="bulleted-list"><li style="list-style-type:disc">La Costituente (1918) rifiuta il governo bolscevico → Lenin la scioglie<ul id="2087ddca-4771-80aa-a536-ce4445fb072a" class="bulleted-list"><li style="list-style-type:circle">“Passaggio del potere ai Soviet”</li></ul></li></ul><hr id="2087ddca-4771-8008-93d1-e570c5aaecfb"/><h3 id="2087ddca-4771-80bf-8894-dfc5a5fc0294" class=""><strong>MARZO 1918</strong></h3><p id="2087ddca-4771-80c4-94c6-f4856ff86f4f" class=""><strong>Riforme istituzionali e pace con la Germania:</strong></p><ul id="2087ddca-4771-80ee-9723-fb0dc37f4754" class="bulleted-list"><li style="list-style-type:disc">Governo assume nome: <strong>Partito Comunista Russo</strong></li></ul><ul id="2087ddca-4771-80cb-a0e6-de8449aff08b" class="bulleted-list"><li style="list-style-type:disc">Capitale trasferita a Mosca</li></ul><ul id="2087ddca-4771-8018-acf4-c746a8329fdc" class="bulleted-list"><li style="list-style-type:disc">Creazione: <strong>Consiglio dei Commissari del Popolo</strong><ul id="2087ddca-4771-8098-8554-d862bd692545" class="bulleted-list"><li style="list-style-type:circle">Presidente: Trockij (Ministro degli Esteri)</li></ul></li></ul><ul id="2087ddca-4771-80fa-b1db-c51a78b28635" class="bulleted-list"><li style="list-style-type:disc">Inizio del <strong>Terrore Rosso</strong> (1918–1923):<ul id="2087ddca-4771-8043-863e-c90206ce9cab" class="bulleted-list"><li style="list-style-type:circle">Repressione dei nemici del regime</li></ul></li></ul><p id="2087ddca-4771-80d2-a162-deee9d9862de" class=""><strong>3 Marzo: Pace di Brest-Litovsk:</strong></p><ul id="2087ddca-4771-800e-9f7c-fb18bbd7a732" class="bulleted-list"><li style="list-style-type:disc">Condizioni pesanti accettate dalla Russia</li></ul><ul id="2087ddca-4771-802c-8662-c0c3806487be" class="bulleted-list"><li style="list-style-type:disc">Reazione delle potenze europee:<ul id="2087ddca-4771-80b3-95ac-e538acb9ab13" class="bulleted-list"><li style="list-style-type:circle">Reparti anglo-francesi in Russia</li></ul><ul id="2087ddca-4771-8022-b60c-e82058aea502" class="bulleted-list"><li style="list-style-type:circle">Giapponesi invadono la Siberia orientale</li></ul></li></ul><hr id="2087ddca-4771-8038-91a0-d292d9f1f0f9"/><h3 id="2087ddca-4771-8032-8499-ef349a1afa34" class=""><strong>GUERRA CIVILE RUSSA (1918–1921)</strong></h3><p id="2087ddca-4771-805a-a564-cc6914ad18b7" class=""><strong>Forze in campo:</strong></p><ul id="2087ddca-4771-8078-9f77-ea8686af8173" class="bulleted-list"><li style="list-style-type:disc"><strong>Armata Rossa</strong> (Bolscevica)</li></ul><ul id="2087ddca-4771-80c9-9568-f530219145f4" class="bulleted-list"><li style="list-style-type:disc"><strong>Armata Bianca</strong> (Zarista, supportata dalle potenze europee)</li></ul><p id="2087ddca-4771-809c-8e67-f1beb5dad591" class=""><strong>Eventi principali:</strong></p><ul id="2087ddca-4771-8021-a538-e1f75806f177" class="bulleted-list"><li style="list-style-type:disc">Avanzata Armata Bianca: conquista regione tra Urali e Volga</li></ul><ul id="2087ddca-4771-80a2-98d4-ecd05ad70c62" class="bulleted-list"><li style="list-style-type:disc">Luglio 1918: fucilazione Zar Nicola II e famiglia (Ekaterinburg)</li></ul><ul id="2087ddca-4771-80ce-a8ef-db2d3ece6cfd" class="bulleted-list"><li style="list-style-type:disc">1919: Trockij organizza l’Armata Rossa<ul id="2087ddca-4771-8083-a6f8-d1c331d32588" class="bulleted-list"><li style="list-style-type:circle">Recupero territori</li></ul><ul id="2087ddca-4771-80d9-8e5a-dcc3e73e2d5e" class="bulleted-list"><li style="list-style-type:circle">Repressione rivolte repubblicane: Cosacchi, Georgia, Ucraina, Bielorussia, ecc.</li></ul><ul id="2087ddca-4771-801b-a863-e4b159f3ab34" class="bulleted-list"><li style="list-style-type:circle">Conflitto con Polonia → Trattato di Riga (Marzo 1921):<ul id="2087ddca-4771-801e-85b7-fde5abf4f652" class="bulleted-list"><li style="list-style-type:square">Polonia ottiene territori ex Armata Bianca</li></ul><ul id="2087ddca-4771-8095-89dd-f2bf1424f747" class="bulleted-list"><li style="list-style-type:square">Bolscevichi riottengono gran parte dell’Ucraina</li></ul></li></ul></li></ul><p id="2087ddca-4771-80fa-b796-ddfc3e161ee3" class=""><strong>Conclusione:</strong></p><ul id="2087ddca-4771-806f-b389-d76dee67dda1" class="bulleted-list"><li style="list-style-type:disc">1921: vittoria definitiva dell’Armata Rossa</li></ul><ul id="2087ddca-4771-80ad-862d-da6f5a3b373a" class="bulleted-list"><li style="list-style-type:disc">Circa 7 milioni di morti</li></ul><hr id="2087ddca-4771-8075-81ae-fe1a8095123f"/><h3 id="2087ddca-4771-8025-aa00-ebd0130e80b1" class=""><strong>COMUNISMO DI GUERRA (1918–1921)</strong></h3><p id="2087ddca-4771-80c8-b2c9-f38f4b4b2307" class=""><strong>Misure principali:</strong></p><ul id="2087ddca-4771-800d-909f-e46ed51830b3" class="bulleted-list"><li style="list-style-type:disc">Requisizione raccolti</li></ul><ul id="2087ddca-4771-8083-b8e4-cebe890dbf9a" class="bulleted-list"><li style="list-style-type:disc">Nazionalizzazione piccole e medie imprese</li></ul><ul id="2087ddca-4771-8020-a4c2-f2b1385b82d9" class="bulleted-list"><li style="list-style-type:disc">Baratto al posto della moneta</li></ul><ul id="2087ddca-4771-807a-ba1f-d4805ac2bb0c" class="bulleted-list"><li style="list-style-type:disc">Controllo armato produzione agricola</li></ul><ul id="2087ddca-4771-80d7-83bd-fddefc6836a6" class="bulleted-list"><li style="list-style-type:disc">Divieto di sciopero</li></ul><p id="2087ddca-4771-809c-9a1e-d04b56f88909" class=""><strong>Conseguenze:</strong></p><ul id="2087ddca-4771-80e4-b8bc-d23967621863" class="bulleted-list"><li style="list-style-type:disc">Diffusa denutrizione</li></ul><ul id="2087ddca-4771-802c-a6bc-f942b4ae9a13" class="bulleted-list"><li style="list-style-type:disc">Epidemie</li></ul><ul id="2087ddca-4771-8048-86e6-f9ac8554e4da" class="bulleted-list"><li style="list-style-type:disc">Disastri in città e campagne</li></ul><hr id="2087ddca-4771-80a3-9bf4-c25b45d7bebe"/><h3 id="2087ddca-4771-80f5-b53d-fee57290a3ba" class=""><strong>ASSETTO ISTITUZIONALE (LUGLIO 1918)</strong></h3><p id="2087ddca-4771-8051-a0c2-cd4b8a7f8217" class=""><strong>Repubblica Socialista Federativa Sovietica Russa:</strong></p><ul id="2087ddca-4771-8094-9571-ef1ee939538f" class="bulleted-list"><li style="list-style-type:disc">Dittatura operai e contadini</li></ul><ul id="2087ddca-4771-8023-b59a-f1b7d16f46c8" class="bulleted-list"><li style="list-style-type:disc">Organi di potere:<ul id="2087ddca-4771-809f-bea8-f10307c28403" class="bulleted-list"><li style="list-style-type:circle">Congresso dei Soviet</li></ul><ul id="2087ddca-4771-8045-9b2d-d01b8605b436" class="bulleted-list"><li style="list-style-type:circle">Comitato esecutivo</li></ul><ul id="2087ddca-4771-80c9-9aa7-ff3bb872c6f8" class="bulleted-list"><li style="list-style-type:circle">Consiglio dei Commissari del Popolo</li></ul></li></ul><p id="2087ddca-4771-8008-ad65-f087bad46645" class=""><strong>Organi del Partito:</strong></p><ul id="2087ddca-4771-80b7-b847-ed69bb8c6db3" class="bulleted-list"><li style="list-style-type:disc">Politburo (potere esecutivo)</li></ul><ul id="2087ddca-4771-8061-b989-ceb7791b1212" class="bulleted-list"><li style="list-style-type:disc">Tribunali del popolo (giudici nominati dal partito)</li></ul><ul id="2087ddca-4771-807d-8c71-d8d0ee0abf2b" class="bulleted-list"><li style="list-style-type:disc">CEKA: polizia politica</li></ul><p id="2087ddca-4771-80f3-8505-d7bdaec242f7" class=""><strong>Altre riforme:</strong></p><ul id="2087ddca-4771-8056-8e28-e8fe0cf3a9fa" class="bulleted-list"><li style="list-style-type:disc">Controllo scuole</li></ul><ul id="2087ddca-4771-8026-8dcc-fa7ab8f2b082" class="bulleted-list"><li style="list-style-type:disc">Osservazione amministrativa della società</li></ul><ul id="2087ddca-4771-8082-b1b5-c98d916ca5cb" class="bulleted-list"><li style="list-style-type:disc"><strong>Scristianizzazione:</strong><ul id="2087ddca-4771-80fa-89e6-c5cfd936081b" class="bulleted-list"><li style="list-style-type:circle">Confisca beni Chiesa ortodossa</li></ul><ul id="2087ddca-4771-80f8-867e-d22a488b0b33" class="bulleted-list"><li style="list-style-type:circle">Arresto capi religiosi</li></ul></li></ul><ul id="2087ddca-4771-8032-803d-f6ecfec56afc" class="bulleted-list"><li style="list-style-type:disc">1919: nascita <strong>Comintern</strong> (internazionale comunista)</li></ul><hr id="2087ddca-4771-808f-af72-def0de949893"/><h3 id="2087ddca-4771-8046-a85a-c2397c3f5515" class=""><strong>1921 – CRISI E NEP</strong></h3><p id="2087ddca-4771-8027-8e2a-d19ec2b71dc7" class=""><strong>Carestia → 3 milioni di morti</strong></p><p id="2087ddca-4771-80d3-a1df-cd540a637346" class=""><strong>Rivolta di Kronstadt:</strong></p><ul id="2087ddca-4771-80b1-b2f2-f4d4b7ed8334" class="bulleted-list"><li style="list-style-type:disc">20.000 marinai ammutinati</li></ul><ul id="2087ddca-4771-80e8-90f0-ee9fd7f71048" class="bulleted-list"><li style="list-style-type:disc">Richieste:<ul id="2087ddca-4771-80de-a750-da793a8dedb0" class="bulleted-list"><li style="list-style-type:circle">Restituzione potere ai Soviet</li></ul><ul id="2087ddca-4771-800f-818d-c8f80086b80f" class="bulleted-list"><li style="list-style-type:circle">Elezioni democratiche</li></ul><ul id="2087ddca-4771-80b5-b343-c5686505f089" class="bulleted-list"><li style="list-style-type:circle">Libertà di stampa</li></ul><ul id="2087ddca-4771-8061-8bd7-e9b55e4781a0" class="bulleted-list"><li style="list-style-type:circle">Fine del Comunismo di guerra</li></ul></li></ul><ul id="2087ddca-4771-8028-a9f5-dfadd5d443d9" class="bulleted-list"><li style="list-style-type:disc">Repressione da 50.000 soldati Armata Rossa</li></ul><p id="2087ddca-4771-805c-8e6b-d4e49451e75a" class=""><strong>Risposta di Lenin:</strong></p><ul id="2087ddca-4771-800a-89db-d47163f6ac4a" class="bulleted-list"><li style="list-style-type:disc">Fine del Comunismo di guerra</li></ul><ul id="2087ddca-4771-804a-b756-cd7277b44917" class="bulleted-list"><li style="list-style-type:disc">Introduzione della <strong>NEP (Nuova Politica Economica):</strong><ul id="2087ddca-4771-8051-966a-c6ca518a31ee" class="bulleted-list"><li style="list-style-type:circle">Incentivo produzione agricola</li></ul><ul id="2087ddca-4771-80b8-b51e-c71732f9e156" class="bulleted-list"><li style="list-style-type:circle">Ritorno economia monetaria</li></ul><ul id="2087ddca-4771-8023-b4e5-cf28481d51d3" class="bulleted-list"><li style="list-style-type:circle">Commercio libero</li></ul><ul id="2087ddca-4771-80aa-a67d-d8ddc4b73a9c" class="bulleted-list"><li style="list-style-type:circle">Legalizzazione imprese &lt; 20 dipendenti</li></ul><ul id="2087ddca-4771-80cd-92f6-f3d88d4388d6" class="bulleted-list"><li style="list-style-type:circle">Stabilizzazione sociale e consenso popolare</li></ul><ul id="2087ddca-4771-80dc-867a-cf6f66bef6e3" class="bulleted-list"><li style="list-style-type:circle">Nessuna apertura politica</li></ul></li></ul><hr id="2087ddca-4771-8020-ae8d-c7db817e6bbc"/><h3 id="2087ddca-4771-8070-9e67-f864f3fb9fa1" class=""><strong>1922 – NASCITA DELL’URSS</strong></h3><p id="2087ddca-4771-8080-8c7d-c25c814c2a1f" class=""><strong>Fondazione URSS (Unione delle Repubbliche Socialiste Sovietiche):</strong></p><ul id="2087ddca-4771-80b3-b291-f3feeb1bad47" class="bulleted-list"><li style="list-style-type:disc">Stato federativo</li></ul><ul id="2087ddca-4771-8096-aa09-cd6c618cef00" class="bulleted-list"><li style="list-style-type:disc">Suddivisione affari interni tra:<ul id="2087ddca-4771-80b4-8f6c-e913a909aa2d" class="bulleted-list"><li style="list-style-type:circle">Russia</li></ul><ul id="2087ddca-4771-8070-b5e3-e4d216fca1e1" class="bulleted-list"><li style="list-style-type:circle">Bielorussia</li></ul><ul id="2087ddca-4771-8074-9706-cd3b420cfba0" class="bulleted-list"><li style="list-style-type:circle">Ucraina</li></ul><ul id="2087ddca-4771-80a8-88e7-d54aaa1295a6" class="bulleted-list"><li style="list-style-type:circle">Transcaucasia</li></ul></li></ul><ul id="2087ddca-4771-80ce-965b-c52c5d6cadcb" class="bulleted-list"><li style="list-style-type:disc">Affari Esteri e Difesa → organi sovietici centrali</li></ul><p id="2087ddca-4771-8031-b62c-e2154a553ce5" class=""><strong>Comintern:</strong></p><ul id="2087ddca-4771-8069-8526-e3d09749e17e" class="bulleted-list"><li style="list-style-type:disc">Terza Internazionale Comunista</li></ul><ul id="2087ddca-4771-8086-a20c-ca042a3a92dc" class="bulleted-list"><li style="list-style-type:disc">Strategia del fronte unico</li></ul><ul id="2087ddca-4771-8094-8eb8-db23826c7b73" class="bulleted-list"><li style="list-style-type:disc">Collaborazione con forze politiche e sindacali riformiste</li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,683 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>I problemi del dopoguerra in Italia.</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2027ddca-4771-80be-b1cb-d3549963c967" class="page sans"><header><h1 class="page-title">I problemi del dopoguerra in Italia.</h1><p class="page-description"></p></header><div class="page-body"><p id="2037ddca-4771-8072-a25f-e50c8f93be35" class="">Dopo la firma dell’armistizio con l’austria l’8 novembre del 1918 , lo scenario politico e sociale Italiano fu stagliato di malcontenti e disordini causati in parte dalla ‘vittoria mutilata’ termine coniato da d’Annunzio per definire gli insoddisfacenti risultati ottenuti ai tavoli di trattativa della conferenza di pace di parigi in cui all’italia fu negata la dalmazia a causa delle pressioni del presidente Americano Wilson.<br/>L’Italia ottenne dalla vittoria del conflitto: il Trentino, l’alto Adige, la Venezia Giulia, l’Istria e Trieste.<br/></p><p id="2077ddca-4771-8024-956d-f9881a2bd23e" class="">Nello spirito della propaganda nazionalista in Italia Gabriele d’Annunzio nel settembre del 1919 alla guida di alcune centinaia di soldati e volontari (totale di <a href="http://ci.ca">ci.a</a> 2500 uomini) marciò su Fiume e ne dichiarò la sua annesione all’italia.</p><p id="2077ddca-4771-809a-a745-de008df6af3a" class="">In Italia invece molteplici problematiche stavano aumentando di gravità:</p><ul id="2077ddca-4771-80df-b656-e5e7a120bad9" class="bulleted-list"><li style="list-style-type:disc">Le industrie non erano riuscite a cambiare il loro regime di produzione alla fine della guerra, da quello bellico ad alto regime a quello di pace, e per evitare il fallimento per delle fabbriche ne derivarono massicci licenziamenti.</li></ul><ul id="2077ddca-4771-80c2-b8be-ca9ec451434d" class="bulleted-list"><li style="list-style-type:disc">La Lira soffrì un crollo del suo valore, mettendo in ginocchio il ceto medio ed i loro redditi fissi causando una perdita di potere d’aquisto ed impoverimento.</li></ul><ul id="2077ddca-4771-80da-b469-d367bde5da33" class="bulleted-list"><li style="list-style-type:disc">La classe liberale dirigente perse il sostegno del suo elettorato dell’incapacità nel combattere la crisi e di rispondere alle aspettative dei sui elettori piccola e media borghesia.</li></ul><ul id="2077ddca-4771-807f-a1cf-da0b66f1b255" class="bulleted-list"><li style="list-style-type:disc">L’ondata socialistga della rivoluzione russa provocò timore nei ceti moderati e conservatori, e l’effetto di speranza nella classe operaia .</li></ul><ul id="2077ddca-4771-80c9-ab21-d973e93bee28" class="bulleted-list"><li style="list-style-type:disc">Le rivendiacazioni dei contadini e dei reduci di guerra, causate dal mancato compimento delle promesse di distribuzione delle terre fatte durante la guerra, nel 1918 fu fondata l’Associazione nazionale combattenti.</li></ul><p id="2077ddca-4771-8009-9db8-c9a4dcaeddfd" class="">Al fallimento della governo in carica 3 nuovi partiti politici si fecero strada nel panorama politico italiano:<div class="indented"><p id="2077ddca-4771-8089-93fb-fbf8a378b4dd" class="">Il Partito Socialista Italiano (PSI) aumentò notevolmente i propri iscritti come difensori della cause dei ceti più disagiati. Il partito in se era però diviso tra riformisti guidati da Filippo Turati che cercavano l’integrazione nelle istituzioni ed un cambiamento “dall’interno”, i massimalisti con Leader Costantino Lazzari rifiutavano qualsiasi collaborazione con le istituzioni e cercavano l’affermazione di un nuovo ordine politico e sociale. Dall’ala dei massimalisti sorse una corrente di estrema sinistra guidata da Amadeo Bordiga e appoggiata dalla rivista “L’ordine Nuovo” diretta da Antonio Gramsci</p><p id="2077ddca-4771-805f-bade-fc624f63512f" class="">La chiesa per contrastare la minaccia socialista acconsentì nel alla creazione del ‘Partito Popolare Italiano’ (PPI) nato a Gennaio del 1919 dall’iniziativa dal sacerdote Luigi Sturzo, con natura laica e interclassista che appellava ai principi del cristianesimo. Ottenne maggiore successo nelle campagne, ed in meridione grazie alla proposta di Sturzo di una riforma fiscale più equa e maggiore giustizia sociale.</p><p id="2077ddca-4771-80e6-bc28-c0158d488393" class="">A Milano Marzo 1919 Benito Mussolini fondò i ‘Fasci italiani di combattimento’ che riceveva appoggio dalle classi medie e dai reduci, fasce della popolazione che soffrivano dalla crisi e temevano gli ideali rivoluzionari socialisti. Il programma mescolava elementi di diversa ideologia come elementi: repubblicani, democratico-socialista, posizioni antiliberali e nazionaliste. L’obiettivo di allargare il più possibile la propria base elettorale. Un tratto distintivo del movimento fu l’uso della violenza nei confronti dei suoi avversari.</p></div></p><p id="2077ddca-4771-804a-abc7-f5cf43f9b923" class="">Elezioni del 1919 <div class="indented"><p id="2077ddca-4771-8005-bea9-f844e58c2d96" class="">Nel novembre del 1919 fu adottato il sistema elettorale proporzionale in cui i seggi parlamentari erano attribuiti ai partiti in proporzione ai voti su scala nazionale.<br/>Useless:(Il sistema maggioritario uninominale assegnave i seggi ai candidati singoli che avessero vinto nei loro collegi, questo favoriva i liberali siccome persone singole potevano ottenere molti voti nelle città con alta densità di persone, rispetto ad un candidato della campagna)<br/>L’esito fu che il partito socialista ottenne 156 seggi, il Partito popolare 100, e i liberali ottennero la maggioranza relativa di 217, i fasci di combattiemnto non ottennero voti.<br/></p><p id="2077ddca-4771-8051-a1c7-c4ff743cc20c" class="">Data la nuova proporzione in parlamento nel maggio 1920 il Governo di Francesco Saverio Nitti fu mandato via, e fu richiamato Giovanni Giolitti che fece un compromesso tra i liberali ed i socialisti e popolari. Propose una riforma fiscale con un’imposta progressiva sul reddito per maggiore equità sociale. Giolitti nel novembre 1920 rattificò il trattato di Rapallo i ncui Fiume divenne città libera sotto la società delle nazioni ed il 26 dicembre fece evacuare i volontari dannunziani.</p></div></p><p id="2077ddca-4771-800f-9c73-ed6a486fe9bb" class="">Biennio Rosso: (1919-1920)<div class="indented"><p id="2077ddca-4771-80af-960a-fc7b91158367" class="">Ondata di agitazione sociale, con le proteste principali fatte da braccianti agricoli e operai delle fabbriche con l’organizzazione dei sindacati. In Italia le proteste si manifestarono allo stesso tempo in campagna ed in città: in campagna nel nordcon le leghe “rosse” e le leghe “bianche” (cattoliche) che ricorsero scioperi e boicottaggi e nel sud con l’occupazione di terreni incolti, in città si diffusero proteste sul carovita (rincaro costo vita), ed i rappresentanti della FIOM (metalmeccanici) tra agosto e settembre organizzarono l’occupazione di 600 fabbriche con 500000 dipendenti partecipanti.</p><p id="2077ddca-4771-808c-93fc-d1597989f65c" class="">Giolitti reagì mediando un compromesso tra industriali e lavoratori che non riuscì a soddisfare nessuna delle due parti, con la prima che non accettò se non per forzatura e la seconda che con i risultati insoddisfacenti perse fiducia nei sindacati. Il Partito socialista si divise nel gennaio 1921 con Antonio Gramsci con la fondazione del Partito comunista d’Italia affiliato al comintern.</p><p id="2077ddca-4771-80d7-944c-f342c9154d20" class="">Nel 1920 nel mezzo di proteste ed insicurezza si cercava una forza politica che potesse garantire la pace e l’ordine sociale dal possibile pericolo rivoluzionario, a quel punto Mussolini si presento come il difensore dell’Italia e con i gruppi armati le ‘squadre d’azione’ si uniformarono con le bande con le camice nere che regolarmente facevano spedizioni punitive a sedi dei socialisti, dei sindacati e leghe agricole. Un esempio fu l’assalto a palazzo d’Accursio a Bologna dove centinaia di fascisti assaltarono la giunta comunale comunista che scatenò 10 morti (tra i socialisti).</p><p id="2077ddca-4771-8058-b6c0-e45b83e1d335" class="">Volendo allearsi con i fasci per indebolire le forze rivoluzionarie Giolitti sciolse il parlamento nel maggio 1921, alle rielezioni il partitio popolare ottenne più seggi contro le previsioni ma anche i fascisti ottennero 35 seggi, Giolitti all’esito si dimise, il nuovo esecutivo fu guidato da Ivanoe Bonomi. Mussolini per sfruttare la situazione fondò l’8 novembre 1921 il partito nazionale fascista, e decise di avvicinarsi alla monarchia ed alla chiesa.</p><p id="2077ddca-4771-800f-837e-d7d8ffa7fa28" class="">Le ostilità tra fascisti e socialisti non si placarono ed il presidente bonomi si dimise e nel febbraio 1922 al suo posto fu chiamato Luigi Facta, la stessa estate l’Alleanza del lavoro (coalizione sindacalista operaia) organizzo un sciopero generale per ‘libertà politiche e sindacali, i fascisti boicottarono lo sciopero lavorando e le squadriglie assaltarono le Camere del lavoro, facendo fallire lo sciopero e favorendo classe industriale e borghese.</p><p id="2077ddca-4771-8020-aca3-da374b7a288c" class="">La marcia su Roma fu pianificata il 16 ottobre e nella notte tra il 27 e 28 ottobre 26000 fascisti si diressero a Roma da tutta l’Italia, il presidente Facta si dimise ed il 30 ottobre Vittorio Emanuele III affidò a mussolini l’incarico di formare un nuovo governo.</p><p id="20d7ddca-4771-8012-b33c-fd90c50b66fc" class="">Lo stesso giorno mussolini instituì il consiglio dei ministri con esponenti di tutti i maggiori partiti per ottenere al collaborazione generale.<br/>Il 16 novembre 1922 nel discorso del bivacco il duce intimidì il parlamento ma poi presentò la sua apertura ad una coalizione.<br/></p></div></p><p id="20d7ddca-4771-8035-b214-dd96d5386eb7" class="">Mussolini mise in atto un piano di accentramento di potere del partito fascista con varie manovre:<div class="indented"><ul id="20d7ddca-4771-807b-b740-c391c0900da1" class="bulleted-list"><li style="list-style-type:disc">L’istituzione del gran consiglio del fascismo, che forniva una linea guida al governo</li></ul><ul id="20d7ddca-4771-809a-911d-fce2bec04477" class="bulleted-list"><li style="list-style-type:disc">La ‘milizia volontaria per la sicurezza nazionale’ cioè la legalizzazione degli squadristi in corpi di forza armata statale.</li></ul><ul id="20d7ddca-4771-805b-9ca7-d41584d3fe60" class="bulleted-list"><li style="list-style-type:disc">Alla fine del ‘23 fu istituita la CEKA, la polizia segreta che si occupava di sorvegliare ed intimidire gli oppositori del fascio.</li></ul></div></p><p id="20d7ddca-4771-806e-b740-f6cd749ca1ac" class="">Le elezioni dell’aprile 1924 furono vinte al 65% dal blocco del PNF creato da mussolini per riunire tutte le forze della coalizione fascista: grazie alla modifica del sistema elettivo ed alla divisione delle forze antifasciste che non seppero fronteggiare a livello politico il PNF, neanche a livello propagandistico e tantomeno gli atti di sabotaggi squadristi delle votazioni e degli uffici liberali.<br/>I fasci di combattimento così ottennero 374 seggi su 535 complessivi.<br/></p><p id="20d7ddca-4771-803b-a692-cc6905a679f7" class="">Il caso dell’omicidio di Matteotti scoinvolse l’opinione pubblica a causa della sua efferratezza. Il segretario del PSU (partito socialista unitario) accusò Mussolini e le violenze ed irregolarità della campagna elettorale e la divulgazione delle prove sarebbe avvenuta nella camera l’11 giugno, ma il giorno stesso sotto casa sua fu sequestrato ed accoltellato in un automobile e fu poi seppellito in un bosco fuori Roma.</p><p id="20d7ddca-4771-8081-a821-f700e789dc8a" class="">La reazione del presidente del consiglio fu quella del discorso del 3 gennaio 1925 in cui si assunse piena responsabilità dei fatti accaduti e dell’inizio della supremazia indiscussa del partito.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,683 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>L’Europa nel primo dopoguerra.</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2027ddca-4771-8010-a6c9-fb1a9cfd473b" class="page sans"><header><h1 class="page-title">L’Europa nel primo dopoguerra.</h1><p class="page-description"></p></header><div class="page-body"><p id="20d7ddca-4771-8039-a54b-fbd654f09a1e" class="">Gli Stati Uniti uscirono dalla guerra nel modo migliore possibile, non avendo sostenuto alcun danno alle loro città, alla loro capacità industriale e rimanendo come creditori di tutte le potenze europee a cui aveva contribuito nella guerra.</p><p id="20d7ddca-4771-8075-a913-cf1b1ef6f6eb" class="">I Ruggenti anni ‘20 furono un periodo di ottimismo generalizato, in cui si stabilì il mercato del consumismo americano moderno, con avvento diffuso di: auto, elettrodomestici e grandi magazzini. La politica estera americana invece risultò piuttosto fredda con un ritorno all’isolazionismo sotto i presidente Harding (1921-’23) vincitore repubblicano, per la “paura rossa” dei bolscevichi. La tendenza isolazionistica però non si applicò ai commerci con l’europa, anzi con essa si instaurarono rapporti di interdipendenza economica, e gli stati uniti nel 1924 nel piano ‘Dowes’ intervenirono in aiuto della germania per il pagamento dei pesanti risarcimenti di guerra.<br/>Dei moti isolazionisti in america sono salienti il cambio delle politiche di immigrazione verso i non anglosassoni ed in particolare gli ebrei temuti per la loro influenza comunista, un esempio è il caso degli italiani sacco e vanzetti ingiustamente giustiziati per crimini non commessi (vedi film), ed altro esempio è il ku klux klan, caratterizzato da un forte spirito patriottico e religioso, che voleva mantenere pura la razza ed i principi americani.<br/>Il Proibizionismo fu un altro esempio della spinta al moralismo di origine puritana istituito dal 1919 al 1933, con lo scopo di bandire l’alcol a causa della sua fonte di degenere sociale; tuttavia l’unico effetto che sortì fu quello di dare un’enorme fonte di denaro al crimine organizzato a causa delle moltissime distillerie illegali nel paese, un esempio è il gangster Al Capone.<br/></p><p id="20d7ddca-4771-802c-8426-d7a9b74e41f7" class="">L’economia postbellica europea era in ginocchio a causa della quasi completa distruzzione delle infrastrutture di produzione, che causò una grave recessione economica, la situazione fu esasperata dal rallentamento industriale post bellico di vari settori, che fu gestito dalle industrie con il licenziamento di migliaia di lavoratori. Le campagne non erano in una situazione migliore a causa della mancanza di manodopera e l’impoverimento e danni a causa del conflito.</p><p id="20d7ddca-4771-8045-b3b9-d9978dc19029" class="">In tutta europa il fenomeno dell’inflazione si diffuse a caua di cause comuni come: la mancanza del controllo governatio del prezzo dei beni di prima necessità, in balia di aumenti incontrollati aumentarono il costo della vita e l’enorme quantità di cartamoneta stampata durante la guerra con poi la perdita di denaro, due esempi salienti furono la Germania e la Gran Bretagna. La Germania gestì il costo delle imposte di guerra con la stampa di moneta che all’inizio degli anni ‘20 causò il crollo del marco, tanto da portare al baratto. La Gran Bretagna seguì una politica deflazionistica della sterlina che permise di mantenere il controllo sui prezzi, inoltre la sterlina ricevette un tasso fisso di cambio con l’oro; ciò permise alla sterlina di assumere insieme al dollaro e l’oro il ruolo di valuta di riferimento europea.</p><p id="20d7ddca-4771-8028-98ae-f8dbaa53e98e" class="">Gli avvenimenti della guerra permisero l’emancipazione delle donne che avevano preso un ruolo più centrale nella società, spesso prendendo il posto degli uomini nelle fabbriche durante la guerra.</p><p id="20d7ddca-4771-805b-89a2-e40dc46c39d8" class="">Tra il 1919 ed il 1920 detto il: “biennio rosso” si verificarono agitazioni operaie e contadine, desiderose di ottenere più libertà e controllo in politica nel modello russo dei soviet. Un altro attore nella politica fu il ceto medio che con il reddito fisso soffrì l’inflazione vedendo a rischio il proprio stile di vita. Questa frustrazione in italia ed in germania portò alla ricerca di uno stato forte che si potesse opporre alle ondate socialiste.</p><p id="20d7ddca-4771-80dd-aa78-fdfeac68a783" class="">La politica in europa ai trattati di Versailles soffrì a causa di divisioni dei territori molto aprossimative in fatto di etnie e mescolanza dei gruppi, come nelle nuove entità statali quali: Polonia, Cecoslovacchia, Iugoslavia. In cui la convivenza di minoranze causò tensioni e rivendicazioni autonomiste. In maggior parte dei paesi dell’europa orientale is instaurarono regimi autoritari. In austria nel biennio rosso il partito socialdemocratico salì al potere ma po iprevalsero i cristiano-sociali, la volontà austriaca dell’anschluss non fu possibile a causa del trattato di pace che espressamente la vietava. In Germania nel clima di instabilità politica il gennaio 1919 ci fù una insurrezione a Berlino degli “spartachisti” gruppi armati comunisti sotto la guida di karl liebknecht che furono fermati dalle forze del cancelliere. pochi giorni dopo la si tennero le votazioni dell’assemblea costituente che diede luce alla repubblica federale di weimar in cui le regioni avevano ampia autonomia al di sotto del reichstag (camera dei deputati) e dal reichsrat (consiglio delle regioni) ed il potere esecutivo sotto il cancelliere nominato dal presidente.<br/>La germania subì un diffuso sentimento antitedesco da parte degli altri stati europei, nel 1923 la francia occupà la Ruhr (regione altamente industrializzata) con la scusa di un mancato pagamento delle riparazioni, togliendo però alla germania una delle sue fonti monetaria per il pagamento delle stesse imposte, la situazione fu poi conclusa grazie all’intervento degli stati uniti grazie al piano Dowes che diede alla germania prestiti a lunga scandeza e permise una crescita economica più veloce, insiema all’intervento degli stati uniti, gli accrodi di locarno furno fondamentali per una distenzione dei rapporti tra la francia e la germania, volontà che fu poi sottolineata dalla ammissione della germania nella società delle nazioni il 1926.<br/></p><p id="20d7ddca-4771-8032-9300-ca3d0637860b" class="">La Francia nonostante la grande devastazione causata dal conflitto riuscì a rimettere il pieni velocemente il suo apparato produttivo, per quanto riguarda la politica interna, i due fronti contrapposti erano: il ’Bloc national’ le forze conservatrici anticomuniste che salirono al poterea nel 1919 ed il fronte socialista che come in altri stati non riusciva ad essere unito tra riformisti e rivoluzionari. Il ‘Bloc national’ mantenne il potere per maggior parte degli anni’20 portando la francia ad un livello economicamente competitivo.</p><p id="20d7ddca-4771-8055-8877-fe6f599f5f37" class="">La Gran Bretagna dal dicembre 1918 sotto la guida dei conservatori e del governo laburista introdusse il suffragio universale, e riuscì a calmare le proteste attraverso accrodi e compromessi tra parti sociali, con una politica di ‘concertazione’. La politica estera della gran bretagna indebolita dal conflitto mondiale attraverso lo statuto di westminster istituì il British Commonwealth of Nations tra: Australia, Nuova Zelanda, Sudafrica el’isola di Terranova. Accordo i ncui la Gran Bretagna riconosceva lo stato paritario e vantaggiosi rapporti economici tra di essi. La questione Irlandese rimase aperta fino la 1921 con la concessione di uno Stato libero d’Irlanda escluse le regoini dell’Irlanda del Nord.</p><p id="20d7ddca-4771-8050-b828-c9a46490691e" class="">Alla fine della guerra le potenza coloniali rimasero con poche risorse per poter controllare i loro possedimenti oltremare, il medio oriente fu spartito fra francia e gran bretagna: alla francia siria e libano e all’inghilterra mesopotamia e palestina, le potenze fomentarono divisione interna fra i territori ottenuti per ridurre la resistenza al loro dominio. In arabia il generale reza pahlawi si proclamò shah ma mantenne buone ralazioni con l’inghilterra mentre che l’egitto nel 1936 ottenne la piena indipendenza, tranne che il contorllo militare del canale di suez inglese. dichiarazione di balfour con il lasciapassare in palestina degli ebrei dall’europa, che portò molte tenisoni che perdurano fino ad oggi. L’impero ottomano fu smembrato ed al posto suo la turchia prese posto nel 1934 lo stato naioznale laico sotto mustafa kemal (ataturk), che mise le basi per uno stato laico moderno, (occidentalizzazione) avviando l’emancipazione delle donne e vietando la poligamia, ciò sentì la corrente contraria dei tradizionalisti islamici.</p><p id="20e7ddca-4771-8006-b15e-eba053775277" class="">In asia una nuova potenza era sorta alla fine della guerra: il Giappone avendo combattuto a fianco dell’intesa attaccando i possedimenti tedeschi in cina, nel1919 al giappone fu riconosciuto il controllo sulle isole tedesche ed il shantung cinese. L’estrema destra mantenne un saldo controllo sul governo con dura repressione contro le manigestazioni e le correnti di sinistra. In cina dopo la caduta del regime di Yuan shikai (1913-1916) inizió il periodo dei signori della guerra, governatori militari con controllo totale sulle regioni mantenute. La concessione al giappone dello shantung alimentó il nazionalismo cinese e nel 1921 fu fondato a canton un governo con l’appoggio dell’unione sovietica  del partito comunista cinese. Dal 1921 al 1925 comunisti e nazionalisti collaborarono sconfiggendo i signori della guerra. Nel 1925 Chiang kai-shek salí al potere e dichiaró fuori legge il partito comunista e l’anno seguente fu nominato presidente della repubblica cinese.</p><p id="20e7ddca-4771-80c6-a3c9-da8c4c3cdbc8" class="">Nell’indocina si formarono moti comunisti sotto la guida di ho chi minh che nel 1941 sí organizzò come vietminh fronte comunista.</p><p id="20e7ddca-4771-80e0-83f8-df156cd2d5a7" class="">In india crescerono tensioni con l’inghilterra con la mancaza bel rispettare le promesse di autonomia governativa, insieme ad esso una grande spinta fu quella di mahatma ghandi con la sua prarica di disobbedienza civile non violenta. Che consisteva nella violazione pubvlica di leggi e norme senza ricorso ad atti violenti, grandi masse della popolqzione in stato di povertà parteciparono a queste manifestazioni, tanto che nel 1919 l’inghilterra concesse poco a poco forme di autonomia ed in seguito nel 1935 una costituzione per una federazione sotto il controllo per finanza difesa e politica estera della corona. La manifestazioni non si conclusero siccome il popolo voleva l’indipendenza.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

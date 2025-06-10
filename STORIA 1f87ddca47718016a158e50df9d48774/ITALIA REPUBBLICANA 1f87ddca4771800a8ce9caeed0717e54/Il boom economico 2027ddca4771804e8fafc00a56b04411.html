@@ -1,0 +1,688 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Il boom economico.</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2027ddca-4771-804e-8faf-c00a56b04411" class="page sans"><header><h1 class="page-title">Il boom economico.</h1><p class="page-description"></p></header><div class="page-body"><p id="2097ddca-4771-8077-9495-fb70c24f1a75" class="">Negli anni ’50 l’Italia visse una straordinaria crescita economica: da paese agricolo divenne una nazione industriale. Il prodotto nazionale lordo, la produzione e i consumi aumentarono rapidamente. L’Italia fu seconda solo alla Germania Ovest per risultati di crescita in Europa.</p><h3 id="871ac342-46d6-4777-9ee5-d00905e2a82a" class="">Le cause della crescita:</h3><ul id="c4d5bfca-49a7-4c53-9bfc-51f953d5993e" class="bulleted-list"><li style="list-style-type:disc">Inserimento nel Mercato Comune Europeo e nella ripresa economica internazionale.</li></ul><ul id="974c847e-fb30-49b9-86db-726678d62d48" class="bulleted-list"><li style="list-style-type:disc">Politiche governative di sostegno alle imprese e alle infrastrutture.</li></ul><ul id="88715e0d-6ac6-4920-9164-521f343fb1bb" class="bulleted-list"><li style="list-style-type:disc">Disponibilità di manodopera a basso costo.</li></ul><ul id="b1bb11d8-28f8-4849-8102-3fc0e8ecda3f" class="bulleted-list"><li style="list-style-type:disc">Riduzione dei dazi doganali, grazie a Ugo La Malfa.</li></ul><p id="20d7ddca-4771-807f-ae06-d110bbc35b5b" class="">
+</p><p id="20d7ddca-4771-80cf-835c-f404477b2c07" class="">L’industria si sviluppò in settori: </p><ul id="20d7ddca-4771-80c7-a940-fbad31db901f" class="bulleted-list"><li style="list-style-type:disc"> degli autoveicoli </li></ul><ul id="20d7ddca-4771-8041-89d7-cac1c1ec0a81" class="bulleted-list"><li style="list-style-type:disc">della meccanica</li></ul><ul id="20d7ddca-4771-808a-95fd-cd0fa40a5141" class="bulleted-list"><li style="list-style-type:disc">delle materie plastiche</li></ul><p id="20d7ddca-4771-8035-a0d2-da385459d7e7" class="">Il sistema economico italiano era caratterizzato dalla presenza sia di grandi industrie private (come Fiat, Edison, Montecatini) sia di importanti imprese pubbliche come l’IRI e l’ENI.</p><p id="20d7ddca-4771-804d-8b84-c038667f9193" class="">Il boom economico riguardò soprattutto il<strong> triangolo industriale</strong>( Torino-Milano-Genova) e successivamente alcune regioni del Centro-Nord ( il Sud rimase arretrato)</p><p id="20d7ddca-4771-80ec-a993-e72fae698bf4" class="">-grande migrazione interna(dal Sud al Nord) , tra il 1958 e il 1963 , conseguenze sociali e difficoltà di integrazioni </p><h2 id="20d7ddca-4771-809b-837a-e2086523ad85" class="">La nascita del centrosinistra</h2><p id="20d7ddca-4771-80cc-8795-c7cc37edfa39" class="">Negli anni ’50 il centrismo politico entrò in crisi. Si iniziò a costruire un’alleanza tra Democrazia Cristiana (DC) e Partito Socialista Italiano (PSI), portando alla nascita del centrosinistra.</p><p id="0df3c578-94ff-4fb1-8921-fbd809e4a787" class="">Uno degli atti più<br/>importanti fu il ritorno di Trieste all’Italia nel 1954.<br/></p><p id="20d7ddca-4771-8086-9738-d0bd06b7174f" class="">Nel<mark class="highlight-blue_background"> 1960, </mark>il governo Tambroni ottenne la fiducia grazie ai voti del Movimento Sociale Italiano (neofascista).</p><p id="20d7ddca-4771-8084-b9f2-d1276cda04e8" class="">- forti proteste popolari, soprattutto a Genova e Reggio Emilia, dove morirono cinque persone. </p><p id="20d7ddca-4771-80e4-8f26-e6a938bc717f" class=""> Dopo pochi mesi Tambroni si dimise e Fanfani formò un governo con l’appoggio esterno dei socialisti.</p><p id="20d7ddca-4771-80a2-af49-e79ed72215c0" class="">Nuovo papa, Giovanni XXIII, che promosse il Concilio Vaticano II (<mark class="highlight-blue_background">1962</mark>) per modernizzare la Chiesa e aprirla ai cambiamenti sociali.</p><p id="20d7ddca-4771-809f-9b03-c47a3c3c9f31" class="">
+</p><hr id="20d7ddca-4771-801c-83fd-f3019975380c"/><p id="20d7ddca-4771-802a-9858-f6043629d512" class="">
+</p><p id="20d7ddca-4771-801d-8a4c-e326055a8756" class="">Nel periodo del primo governo di centrosinistra (febbraio 1962-maggio 1963) si attuarono due importanti riforme: </p><ul id="103bf29c-de05-4903-a36c-ef95f28fa970" class="bulleted-list"><li style="list-style-type:disc"><strong>Nazionalizzazione dell’energia elettrica (1962), c</strong>reazione dell’ENEL per controllare la produzione e distribuzione dell’energia.</li></ul><ul id="9ff11dfc-1962-4cb5-ad48-a774069f6a7b" class="bulleted-list"><li style="list-style-type:disc"><strong>Scuola media unificata, i</strong>ntrodotta l’obbligatorietà scolastica fino a 14 anni, eliminando la separazione tra scuole medie e avviamento professionale.</li></ul><p id="f64c0b6a-04ba-459a-8e61-d7c7f8aef551" class="">Dal 1963 iniziò il “centrosinistra organico” con governi stabili guidati da Aldo Moro (DC) e Pietro Nenni (PSI).</p><p id="20d7ddca-4771-8047-b4ce-d6f3135b218a" class="">
+</p><p id="20d7ddca-4771-80bd-9fae-e3ffe4591d0e" class="">I fattori di debolezza del centro sinistra: </p><ul id="c267002a-b884-471a-85b4-a7dfff7d67a2" class="bulleted-list"><li style="list-style-type:disc">Immobilismo politico: Dopo le prime riforme, non ci furono grandi cambiamenti, anche a causa della crisi economica che iniziava a colpire l’Italia.</li></ul><ul id="1b7dc25f-6dc8-435f-b416-ab66eaf7336c" class="bulleted-list"><li style="list-style-type:disc">Il &quot;piano Solo&quot; (1964): Un tentativo di colpo di Stato organizzato da Giovanni De Lorenzo, sventato prima di essere attuato.</li></ul><ul id="069c6fec-4b0b-4b15-b256-6e20d540a332" class="bulleted-list"><li style="list-style-type:disc">Crescente corruzione: L’uso della spesa pubblica per favori e privilegi portò a fenomeni di corruzione diffusi.</li></ul><p id="2e9ec4ae-58df-4048-b1ab-d9d7dbe7a5b6" class="">Il PCI, escluso dal governo, propose una “via italiana al socialismo” basata sulla democrazia e le riforme, senza rottura istituzionale. Alle elezioni del 1968, sia il PCI che la DC aumentarono i propri consensi, mentre i partiti minori persero terreno, soprattutto i socialisti.</p><h2 id="20d7ddca-4771-80b2-8b27-d71d2a150823" class="">Il Sessantotto e gli “anni di piombo” in Italia</h2><h3 id="66562f70-f155-4f89-bde4-8c2942b60d37" class="">I presidenti della Repubblica (1964-1985)</h3><ul id="3fe26372-cc9d-4070-8b1c-78d42e746c53" class="bulleted-list"><li style="list-style-type:disc">Giuseppe Saragat (1964-1971)</li></ul><ul id="d4e9c3d1-3460-4b88-8c23-49e62e463b80" class="bulleted-list"><li style="list-style-type:disc">Giovanni Leone (1971-1978)</li></ul><ul id="b40d8a32-95ff-4c3b-8b16-4c0e3836c91a" class="bulleted-list"><li style="list-style-type:disc">Sandro Pertini (1978-1985)</li></ul><p id="20d7ddca-4771-80d2-a51b-ea53b6f87a94" class="">
+</p><p id="059a4fb7-1400-4110-833f-814e6842ace1" class="">Tra la fine del <mark class="highlight-blue_background">1967 e il 1968</mark> in Italia si sviluppò un ampio movimento di protesta studentesca, iniziato a Trento e poi esteso a Torino, Milano, Roma e altre città. La protesta riguardava:</p><ul id="7c748c1c-ec74-4664-9e12-41eb6302ea3e" class="bulleted-list"><li style="list-style-type:disc">L’autoritarismo scolastico e le ingiustizie sociali legate all’istruzione.</li></ul><ul id="2d195c02-50e9-4031-81bc-53bcfd34b07a" class="bulleted-list"><li style="list-style-type:disc">La selezione gerarchica e meritocratica.</li></ul><ul id="7abc7f80-78da-44d5-8e97-e15a719e6d7a" class="bulleted-list"><li style="list-style-type:disc">L’inadeguatezza delle strutture universitarie e la disconnessione dal mercato del lavoro.</li></ul><p id="b11cba42-cb8e-4b48-a876-146cc57b00f4" class="">Tra il <mark class="highlight-blue_background">1969 e il 1970</mark> studenti e operai unirono le loro lotte contro il capitalismo:</p><ul id="e3e7acb4-4878-4910-95f5-f0062126e71b" class="bulleted-list"><li style="list-style-type:disc">Gli operai rivendicarono diritti sindacali, consigli di fabbrica e migliori condizioni lavorative.</li></ul><ul id="9b52e5f0-b830-458f-8115-faad7dccb15f" class="bulleted-list"><li style="list-style-type:disc">Nel 1969 un milione e mezzo di metalmeccanici scioperò per il rinnovo del contratto.</li></ul><ul id="85d1869c-f271-42d6-a4da-94b14f4dff6d" class="bulleted-list"><li style="list-style-type:disc">Nel 1970 venne approvato lo <strong>Statuto dei lavoratori</strong>, che sanciva importanti diritti sindacali.</li></ul><p id="20d7ddca-4771-80d0-8862-cfe1dfe6ff33" class=""><br/>Nel 1968-1969 nacquero movimenti di estrema sinistra come Potere Operaio, Lotta Continua e Avanguardia Operaia, contrari ai partiti tradizionali.<br/><br/></p><ul id="ab350e99-d267-499e-9e4f-3df4a6b6a5c0" class="bulleted-list"><li style="list-style-type:disc">Il 12 dicembre 1969: <strong>strage di piazza Fontana</strong> a Milano (17 morti), primo atto del terrorismo neofascista.</li></ul><ul id="75b18dfd-521f-4717-b295-6be2ed5ef67a" class="bulleted-list"><li style="list-style-type:disc">Obiettivo: creare panico e destabilizzare la democrazia.</li></ul><ul id="a80b2589-eb07-4408-b360-6c0fffd0e2b4" class="bulleted-list"><li style="list-style-type:disc">Altri attentati:<ul id="8417c178-6636-401a-8f6b-6d75e212c6ff" class="bulleted-list"><li style="list-style-type:circle">1974: <strong>strage di piazza della Loggia</strong> a Brescia (8 morti) e <strong>attentato al treno Italicus</strong> (12 morti).</li></ul><ul id="9d510669-7673-40b4-bebf-86420d0c4666" class="bulleted-list"><li style="list-style-type:circle">1980: <strong>strage alla stazione di Bologna</strong> (85 morti).</li></ul></li></ul><p id="05c13ef6-6392-49e4-93f2-b8e19c17476f" class="">Le indagini furono spesso ostacolate e deviate, senza completa chiarezza sui responsabili.</p><p id="3e7c8e93-921e-47b9-908c-0903c90a2a9e" class="">Dalla metà degli anni Settanta emerse il terrorismo dell’estrema sinistra, in particolare le <strong>Brigate Rosse</strong>:</p><ul id="34c4eb45-7bf8-48a6-a337-9b5da33d0689" class="bulleted-list"><li style="list-style-type:disc">Obiettivo: abbattere il capitalismo con la lotta armata.</li></ul><ul id="20fd30b7-47fe-49a6-acf9-92f730e11a5b" class="bulleted-list"><li style="list-style-type:disc">Azioni: rapimenti, gambizzazioni, omicidi di magistrati, giornalisti e industriali.</li></ul><ul id="91a50c40-1db7-4fbf-9124-81789f3c7eff" class="bulleted-list"><li style="list-style-type:disc">Il terrorismo rosso e nero insanguinò l’Italia per più di un decennio.</li></ul><p id="394e753b-aa68-4e2c-9cbd-98abf7510189" class="">Le riforme del centrosinistra</p><ul id="46f26ea8-3611-482b-a139-065c730b371e" class="bulleted-list"><li style="list-style-type:disc">1968: liberalizzazione degli accessi universitari.</li></ul><ul id="96b9911a-10d1-41b7-a175-5519b8cb5cd6" class="bulleted-list"><li style="list-style-type:disc">1970: istituzione delle regioni e approvazione della legge sul divorzio (confermata dal referendum del 1974).</li></ul><ul id="1fa0a608-8c46-41b3-adba-625e0cf518bb" class="bulleted-list"><li style="list-style-type:disc">1975: riforma del diritto di famiglia e abbassamento della maggiore età da 21 a 18 anni.</li></ul><ul id="f08e9863-e548-479f-93b0-7fce85b34994" class="bulleted-list"><li style="list-style-type:disc">1978: legge sull’aborto e apertura dei consultori.</li></ul><p id="63705eae-0514-4628-a9e7-35dfe32870c0" class="">Il compromesso storico e l’eurocomunismo</p><ul id="13f7f261-8a08-4758-9fdb-e48cbfcba8c5" class="bulleted-list"><li style="list-style-type:disc">Enrico Berlinguer (PCI) propose un’alleanza tra comunisti e democristiani per riformare l’Italia.</li></ul><ul id="06116fcb-a732-4206-9bfb-0746dbfb4bf9" class="bulleted-list"><li style="list-style-type:disc">Nacque l’eurocomunismo, una forma di comunismo indipendente dall’URSS.</li></ul><ul id="209a59db-04e4-431e-95d6-1a26af024966" class="bulleted-list"><li style="list-style-type:disc">Il PCI ottenne importanti successi elettorali tra il 1975 e il 1976 ma restò escluso dal governo.</li></ul><p id="9db3be06-30f4-4b4e-988c-ed96fff5bf3a" class="">Negli anni Settanta l’Italia affrontò:</p><ul id="660c5b0c-1bc0-4d91-aa49-5dfca185041e" class="bulleted-list"><li style="list-style-type:disc">Grave crisi economica con alta inflazione, disoccupazione e stagnazione.</li></ul><ul id="fd2c6af0-4b84-478c-ac58-dbc61344907b" class="bulleted-list"><li style="list-style-type:disc">Scandali politici (come le tangenti nel settore petrolifero nel 1974).</li></ul><ul id="c91afa3a-52f8-46ae-ae42-4a6287a7e552" class="bulleted-list"><li style="list-style-type:disc">Crescente sfiducia verso le istituzioni e un clima di instabilità politica.</li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
